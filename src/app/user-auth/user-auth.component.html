@@ -1,0 +1,168 @@
+<div class="user-auth">
+  <div *ngIf="!showLogin">
+    <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+      <mat-card class="mat-card">
+        <mat-card-header class="mat-card-header">
+          <h1>User Sign up</h1>
+        </mat-card-header>
+        <mat-card-content class="mat-card-content">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your name</mat-label>
+            <input
+              matInput
+              placeholder=""
+              name="name"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Email</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="email"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder=""
+              name="password"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button class="mat-button">Sign Up</button>
+          <a class="auth-toggle-link" (click)="openLogin()"
+            >Already Have Account? Click to login
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+
+  <!-- //////////////////// user Login ///////////////////// -->
+  <div *ngIf="showLogin">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card-header">
+        <h1>User Login</h1>
+      </mat-card-header>
+      <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+        <mat-card-content class="mat-card-content">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Email</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="email"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder=""
+              name="password"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button class="mat-button">Login</button>
+          <a class="auth-toggle-link" (click)="openSignUp()"
+            >Don't have account? Click to Sign Up
+          </a>
+        </mat-card-content>
+      </form>
+    </mat-card>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="user-auth">
+  <div *ngIf="!showLogin" class="user-signup">
+    <h1>User Sign-up</h1>
+    <form
+      #userSignUp="ngForm"
+      class="common-form"
+      (ngSubmit)="signUp(userSignUp.value)"
+    >
+      <input
+        class="form-input"
+        type="text"
+        name="name"
+        placeholder="Enter User Name"
+        ngModel
+      />
+      <input
+        class="form-input"
+        type="text"
+        name="email"
+        placeholder="Enter User Email"
+        ngModel
+      />
+      <input
+        class="form-input"
+        type="password"
+        name="password"
+        placeholder="Enter User Password"
+        ngModel
+      />
+      <button class="form-button">Sign Up</button>
+      <p>Already have account ? <a (click)="openLogin()">Click here</a></p>
+    </form>
+  </div>
+  <div *ngIf="showLogin" class="user-login">
+    <h1>User Login</h1>
+    <form
+      #userLogin="ngForm"
+      class="common-form"
+      (ngSubmit)="login(userLogin.value)"
+    >
+    <p class="error-p">{{authError}}</p>
+      <input
+        class="form-input"
+        type="text"
+        name="email"
+        placeholder="Enter User Email"
+        ngModel
+        #email="ngModel"
+        required
+        email
+      />
+      <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter valid email</span></p>
+      <input
+        class="form-input"
+        type="password"
+        name="password"
+        placeholder="Enter User Password"
+        ngModel
+        #password="ngModel"
+        required
+        minlength="4"
+        maxlength="10"
+      />
+      <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter valid Password</span></p>
+      <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+      <p>Don't have Account ? <a (click)="openSignUp()">Click here</a></p>
+    </form>
+  </div>
+</div> -->

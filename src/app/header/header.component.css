@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: green;
+  color: white;
+  height: 65px;
+  align-items: center;
+}
+.navbar h1 a {
+  color: white;
+  margin: 0;
+  font-size: 40px;
+  text-decoration: none;
+}
+.navbar ul {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.navbar .nav-search {
+  flex: 1;
+  display: flex;
+  margin: 0 50px;
+  padding-bottom: 15px;
+}
+.navbar .nav-search input {
+  flex: 1;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  height: 35px;
+  border-right: 0px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.navbar .nav-search button {
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  height: 35px;
+  border-left: 0px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.suggested-result {
+  position: absolute;
+  display: list-item !important;
+  z-index: 10;
+  background-color: #fff;
+  width: 300px;
+  top: 50px;
+  border: 1px solid #ddd;
+}
+.suggested-result li {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.suggested-result li a {
+  cursor: pointer;
+  color: blueviolet;
+}

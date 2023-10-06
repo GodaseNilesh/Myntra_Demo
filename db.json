@@ -1,0 +1,126 @@
+{
+  "seller": [
+    {
+      "name": "tony",
+      "email": "tony@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "Nilesh",
+      "email": "nilesh@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "Samsung s12",
+      "price": "22999",
+      "color": "white",
+      "category": "Mobile",
+      "discription": "A Samsung product",
+      "image": "https://m.media-amazon.com/images/I/41UBZWbU7QL._SX300_SY300_QL70_FMwebp_.jpg",
+      "id": 1
+    },
+    {
+      "name": "iphone 15",
+      "price": "150000",
+      "color": "Black",
+      "category": "Mobile",
+      "discription": "An amazing device",
+      "image": "https://m.media-amazon.com/images/I/41UBZWbU7QL._SX300_SY300_QL70_FMwebp_.jpg",
+      "id": 2
+    },
+    {
+      "name": "Dell Laptop",
+      "price": "99999",
+      "color": "Black",
+      "category": "Laptop",
+      "discription": "dell laptop",
+      "image": "https://5.imimg.com/data5/CR/VN/IX/SELLER-79827731/dell-laptop.jpg",
+      "id": 3
+    },
+    {
+      "name": "Noise Smart watch",
+      "price": "2999",
+      "color": "Black",
+      "category": "Watch",
+      "discription": "A smart watch",
+      "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
+      "id": 4
+    },
+    {
+      "name": "Levis jeans",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Cloths/jeans",
+      "discription": "Comfortable for Everyone",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2023/6/318756666/SQ/XK/HF/145684826/product-jpeg.jpg",
+      "id": 5
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "3500",
+      "color": "Brown",
+      "category": "Shoes",
+      "discription": "Best for travelling",
+      "image": "https://static.nike.com/a/images/t_default/8a73f26b-b258-4681-8907-bf9deee2fe23/dunk-high-retro-se-shoes-ZgKR1S.png",
+      "id": 6
+    },
+    {
+      "name": "Bracelet",
+      "price": "2000",
+      "color": "Golden",
+      "category": "Jwellery",
+      "discription": "A men's bracelet.",
+      "image": "https://5.imimg.com/data5/LU/UL/DJ/SELLER-84633020/gents-bracelet.jpg",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "name": "peter",
+      "email": "peter@gmail.com",
+      "password": "abc123",
+      "id": 1
+    },
+    {
+      "name": "Nilesh",
+      "email": "nilesh@gmail.com",
+      "password": "abc123",
+      "id": 2
+    },
+    {
+      "name": "Ganesh",
+      "email": "ganesh@gmail.com",
+      "password": "abc123",
+      "id": 3
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "email": "nilesh@gmail.com",
+      "address": "abcd",
+      "contact": "9999",
+      "totalPrice": 7100,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "email": "peter@gmail.com",
+      "address": "abcd",
+      "contact": "9999",
+      "totalPrice": 2100,
+      "userId": 1,
+      "id": 2
+    }
+  ]
+}

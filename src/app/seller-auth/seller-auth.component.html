@@ -1,0 +1,105 @@
+<div class="seller-auth">
+  <div *ngIf="!showLogin">
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+      <mat-card class="mat-card">
+        <mat-card-header class="mat-card-header">
+          <h1>Seller Sign up</h1>
+        </mat-card-header>
+        <mat-card-content class="mat-card-content">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your name</mat-label>
+            <input
+              matInput
+              placeholder=""
+              name="name"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Email</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="email"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder=""
+              name="password"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button class="mat-button">Sign Up</button>
+          <a class="auth-toggle-link" (click)="openLogin()"
+            >Already Have Account? Click to login
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+  <!-- //////////////////////////// seller sign up //////////////// -->
+  <!-- <div *ngIf="!showLogin" class="signup">
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+      <input class="form-input" type="text" name="name" ngModel placeholder="enter name" />
+      <input class="form-input" type="password" name="password" ngModel placeholder="enter password" />
+      <input class="form-input" type="text" name="email" ngModel placeholder="enter email" />
+      <button class="form-button">Sign Up</button>
+      <a class="auth-toggle-link" (click)="openLogin()">Already Have Account? Click to login </a>
+    </form>
+  </div> -->
+
+  <!-- //////////////////// user Login ///////////////////// -->
+  <div *ngIf="showLogin">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card-header">
+        <h1>Seller Login</h1>
+      </mat-card-header>
+      <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)">
+        <mat-card-content class="mat-card-content">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Email</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="email"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              matInput
+              placeholder=""
+              name="password"
+              ngModel
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button class="mat-button">Login</button>
+          <a class="auth-toggle-link" (click)="openSignUp()"
+            >Don't have account? Click to Sign Up
+          </a>
+        </mat-card-content>
+      </form>
+    </mat-card>
+  </div>
+</div>
+<!-- /////////////////// Seller Log in ////////////////// -->
+<!-- <div *ngIf="showLogin" class="login">
+    <h1>Seller  Login</h1>
+    <p class="error-p">{{authError}}</p>
+    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
+        <input class="form-input" type="text" name="email" ngModel placeholder="enter email" />
+        <input class="form-input" type="password" name="password" ngModel placeholder="enter password" />
+        <button class="form-button"> Login</button>
+        <a class="auth-toggle-link" (click)="openSignUp()">Don't Have Account? Click to Sign up </a>
+    </form>
+  </div>
+</div> -->
