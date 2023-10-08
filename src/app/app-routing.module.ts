@@ -12,9 +12,10 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import CartPageComponent from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'seller-auth', component: SellerAuthComponent },
   {
     path: 'seller-home',
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     component:MyOrdersComponent,
     path:'my-orders'
+  },
+  {
+    component:ProductListComponent,
+    path:'product-list'
   }
 ];
 

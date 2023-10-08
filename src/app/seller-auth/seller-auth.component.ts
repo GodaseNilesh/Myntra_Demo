@@ -37,4 +37,8 @@ export class SellerAuthComponent {
   openSignUp(){
     this.showLogin=false
   }
+
+  check(data:any){
+    console.log(data);
+  }
 }

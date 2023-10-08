@@ -17,27 +17,55 @@
 
 <div class="product-list-wrapper">
   <h1>Trendy Products</h1>
-  <div class="row">
-    <div class="col-sm-3" *ngFor="let item of trendyProducts">
-      <div class="product-item">
-        <img
-          src="{{item.image}}"
-          alt=""
-        />
-        <div class="product-details">
-          <h6 class="name-head">{{item.name}}</h6>
-          <div class="product-price">
-            <h6>Price:{{item.price}}</h6>
-          </div>
-          <div class="product-color">
-            <h6>color:{{item.color}}</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-		  <a routerLink="/details/{{item.id}}">View Details</a>
-          <a href="">Add to cart</a>
-        </div>
+  <div class="products">
+    <div class="product-content">
+      <div class="product-image">
+        <img src="https://citizenwatch.widen.net/content/cqwu6q9zvt/png/Promaster+Tough.png?u=41zuoe&width=400&height=400&quality=80&crop=false&keep=c&color=FFFFFF00" alt="">
+      </div>
+      <div class="product-links">
+        <p style="display: none;" name="watch"></p>
+        <a (click)="showProductList('Watch')">Watch</a>
       </div>
     </div>
-  </div>
+    <div class="product-content" >
+      <div class="product-image" style="background-color: red;">
+        <img src="https://media.self.com/photos/5dd44cf5d0525b0009f5edf6/4:3/w_2560%2Cc_limit/AdobeStock_208000726.jpeg" alt="">
+      </div>
+      <div class="product-links">
+        <a (click)="showProductList('Glasses')">Glasses</a>
+      </div>
+    </div>
+    <div class="product-content">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/TG/DN/MY-37294786/designer-artificial-jewellery.jpg" alt="">
+      </div>
+      <div class="product-links">
+        <a (click)="showProductList('Jewellery')">Jewellery</a>
+      </div>
+    </div>
+    <div class="product-content">
+      <div class="product-image">
+        <img src="https://images.meesho.com/images/products/280402414/kzump_512.webp" alt="">
+      </div>
+      <div class="product-links">
+        <a (click)="showProductList('Cloths')">Cloths</a>
+      </div>
+    </div>
+    <div class="product-content">
+      <div class="product-image">
+        <img src="https://rukminim2.flixcart.com/image/300/300/xif0q/shoe/7/2/m/6-tm-12-6-trm-white-original-imagjqyzz8z9jrgf.jpeg?q=90&crop=false" alt="">
+      </div>
+      <div class="product-links">
+        <a (click)="showProductList('Shoes')">Shoes</a>
+      </div>
+    </div>
+    <div class="product-content">
+      <div class="product-image">
+        <img src="https://m.media-amazon.com/images/I/41kyuER2HjL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+      </div>
+      <div class="product-links">
+        <a (click)="showProductList('Mobiles')">Mobiles</a>
+      </div>
+    </div>
+    </div>
 </div>

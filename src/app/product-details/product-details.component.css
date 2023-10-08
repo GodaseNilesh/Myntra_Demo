@@ -37,3 +37,14 @@ h6 {
   width: 50px;
   padding: 10px;
 }
+
+.vertical-line{
+  width: 20px;
+  height: auto;
+  border: 1px solid red;
+  background-color: red;
+}
+.image-tile{
+  border-right: 2px solid #ddd;
+}
+

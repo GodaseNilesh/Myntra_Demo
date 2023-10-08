@@ -21,67 +21,44 @@
   ],
   "products": [
     {
-      "name": "Samsung s12",
-      "price": "22999",
-      "color": "white",
-      "category": "Mobile",
-      "discription": "A Samsung product",
-      "image": "https://m.media-amazon.com/images/I/41UBZWbU7QL._SX300_SY300_QL70_FMwebp_.jpg",
+      "companyname": "Noise",
+      "name": "Smart Watch",
+      "price": "2000",
+      "color": "Black",
+      "category": "Watch",
+      "discription": "a men's smart watch",
+      "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
       "id": 1
     },
     {
-      "name": "iphone 15",
-      "price": "150000",
-      "color": "Black",
-      "category": "Mobile",
-      "discription": "An amazing device",
-      "image": "https://m.media-amazon.com/images/I/41UBZWbU7QL._SX300_SY300_QL70_FMwebp_.jpg",
+      "companyname": "Titan",
+      "name": "Watch",
+      "price": "1200",
+      "color": "Golden",
+      "category": "Watch",
+      "discription": "a men's watch",
+      "image": "https://m.media-amazon.com/images/I/71KxuRv3-fL._UY679_.jpg",
       "id": 2
     },
     {
-      "name": "Dell Laptop",
-      "price": "99999",
-      "color": "Black",
-      "category": "Laptop",
-      "discription": "dell laptop",
-      "image": "https://5.imimg.com/data5/CR/VN/IX/SELLER-79827731/dell-laptop.jpg",
+      "companyname": "Sonata",
+      "name": "Watch",
+      "price": "1000",
+      "color": "Golden",
+      "category": "Watch",
+      "discription": "a men's watch",
+      "image": "https://m.media-amazon.com/images/I/71mG-2RT7NL._UY679_.jpg",
       "id": 3
     },
     {
-      "name": "Noise Smart watch",
-      "price": "2999",
-      "color": "Black",
-      "category": "Watch",
-      "discription": "A smart watch",
-      "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
-      "id": 4
-    },
-    {
-      "name": "Levis jeans",
-      "price": "2000",
+      "companyname": "Lenscart",
+      "name": "Glasses",
+      "price": "800",
       "color": "Blue",
-      "category": "Cloths/jeans",
-      "discription": "Comfortable for Everyone",
-      "image": "https://5.imimg.com/data5/ANDROID/Default/2023/6/318756666/SQ/XK/HF/145684826/product-jpeg.jpg",
-      "id": 5
-    },
-    {
-      "name": "Nike Shoes",
-      "price": "3500",
-      "color": "Brown",
-      "category": "Shoes",
-      "discription": "Best for travelling",
-      "image": "https://static.nike.com/a/images/t_default/8a73f26b-b258-4681-8907-bf9deee2fe23/dunk-high-retro-se-shoes-ZgKR1S.png",
-      "id": 6
-    },
-    {
-      "name": "Bracelet",
-      "price": "2000",
-      "color": "Golden",
-      "category": "Jwellery",
-      "discription": "A men's bracelet.",
-      "image": "https://5.imimg.com/data5/LU/UL/DJ/SELLER-84633020/gents-bracelet.jpg",
-      "id": 7
+      "category": "Glasses",
+      "discription": "Recangle square glasses",
+      "image": "https://partners.lenskart.com/cdn/shop/products/blue-gradient-gold-transparent-full-rim-square-lenskart-studio-hip-hop-lk-s15200-c3-sunglasses_g_0559_21_02_2023_1325x.jpg?v=1684286955",
+      "id": 4
     }
   ],
   "users": [

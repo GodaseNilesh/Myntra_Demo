@@ -7,6 +7,7 @@ import { cart, order, product } from '../data-types';
 })
 export class ProductService {
   cartData = new EventEmitter<product[] | []>();
+  productCategory:string='';
 
   constructor(private http: HttpClient) {}
   addProduct(data: product) {
@@ -15,6 +16,13 @@ export class ProductService {
   productList() {
     return this.http.get<product[]>('http://localhost:3000/products');
   }
+
+  //product list by category
+  productListByCategory(data:string){
+    this.productCategory=data;
+    return this.http.get<product[]>(`http://localhost:3000/products?category=${data}`);
+  }
+
   deleteProduct(id: number) {
     return this.http.delete(`http://localhost:3000/products/${id}`);
   }

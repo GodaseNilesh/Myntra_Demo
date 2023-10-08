@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent {
 popularProducts:undefined | product[];
 trendyProducts: undefined | product[];
 
-    constructor(private product:ProductService){
+    constructor(private product:ProductService, private router:Router){
 
     }
 
@@ -22,5 +23,11 @@ trendyProducts: undefined | product[];
       this.product.trendyProducts().subscribe((data)=>{
         this.trendyProducts=data;
       });
+    }
+
+    showProductList(value:string){
+      console.log(value);
+      this.product.productListByCategory(value);
+      this.router.navigate(['product-list']);
     }
 }

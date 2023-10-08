@@ -82,7 +82,8 @@
               ngModel
             /> </mat-form-field
           ><br />
-          <button mat-raised-button class="mat-button">Login</button>
+          <!-- <a href="" #hello value="hello" name="hello">Hello</a>     -->
+          <button mat-raised-button class="mat-button" (click)="check('hello')">Login</button>
           <a class="auth-toggle-link" (click)="openSignUp()"
             >Don't have account? Click to Sign Up
           </a>

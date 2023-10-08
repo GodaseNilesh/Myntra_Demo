@@ -7,7 +7,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list'
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import {MatGridListModule} from '@angular/material/grid-list'
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatDividerModule
   ]
 })
 export class AngularMaterialModule { }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +19,9 @@ import CartPageComponent from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AngularMaterialModule} from './angular-material/angular-material.module'
+import {AngularMaterialModule} from './angular-material/angular-material.module';
+import { FooterComponent } from './footer/footer.component';
+import { ProductListComponent } from './product-list/product-list.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import {AngularMaterialModule} from './angular-material/angular-material.module'
     UserAuthComponent,
     CartPageComponent,
     CheckoutComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    FooterComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

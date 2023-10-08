@@ -9,6 +9,7 @@ export interface login{
 }
 export interface product{
     forEach(arg0: (product: product) => void): unknown
+    companyname:string,
     name:string,
     price:number,
     category:string,

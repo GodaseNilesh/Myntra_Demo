@@ -26,10 +26,10 @@
 <!-- //////////////// -->
 <div class="row product-details" *ngIf="productData">
 <mat-grid-list cols="2" rowHeight="1.5:1">
-  <mat-grid-tile>
+  <mat-grid-tile class="image-tile">
       <img class="product-image" src="{{ productData.image }}" alt="" />
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile class="content-tile">
     <div >
       <h1>{{ productData.name }}</h1>
       <h3>Price : {{ productData.price }}</h3>
