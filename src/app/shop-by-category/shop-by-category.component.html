@@ -1,0 +1,14 @@
+<div class="main">
+    <h1>Shop By Category</h1>
+    <div class="inner">
+        <mat-card *ngFor="let item of uniqueObjArray">
+            <mat-card-content>
+                <img src="{{item.image}}" alt="">
+            </mat-card-content>
+            <hr>
+            <mat-card-footer>
+                <button mat-raised-button (click)="serachByCompany(item.companyname)">{{item.companyname}}</button>           
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>

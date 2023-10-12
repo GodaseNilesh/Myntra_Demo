@@ -16,7 +16,7 @@ invalidUserAuth=new EventEmitter<boolean>(false)
     .subscribe((result)=>{
       // console.warn(result);
       if(result){
-        localStorage.setItem('user',JSON.stringify(result.body))
+        sessionStorage.setItem('user',JSON.stringify(result.body))
         this.router.navigate(['/'])
       }
     })
@@ -26,7 +26,7 @@ invalidUserAuth=new EventEmitter<boolean>(false)
     this.http.get<SignUp[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,
     {observe:'response'}).subscribe((result)=>{
       if(result && result.body?.length){
-        localStorage.setItem('user',JSON.stringify(result.body[0]))
+        sessionStorage.setItem('user',JSON.stringify(result.body[0]))
         this.invalidUserAuth.emit(false);
       this.router.navigate(['/']);
       }else{
@@ -36,7 +36,7 @@ invalidUserAuth=new EventEmitter<boolean>(false)
   }
 
   userAuthReload(){
-    if(localStorage.getItem('user')){
+    if(sessionStorage.getItem('user')){
       this.router.navigate(['/'])
     }
   }

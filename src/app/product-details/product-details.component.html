@@ -1,28 +1,4 @@
-<!-- <div class="row product-details" *ngIf="productData">
-  <div class="col-sm-6">
-    <img class="product-image" src="{{ productData.image }}" alt="" />
-  </div>
-  <div class="col-sm-6">
-    <div class="details">
-      <h1>{{ productData.name }}</h1>
-      <h3>Price : {{ productData.price }}</h3>
-      <div>
-        color:
-        <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
-      </div>
-      <h6>Category : {{productData.category}}</h6>
-      <h6>Discription : {{productData.discription}}</h6>
-      <button class="form-button">Buy Now</button>
-      <button *ngIf="!removeCart" class="form-button" (click)="AddToCart()">Add to Cart</button>
-      <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">Remove to Cart</button>
-      <div class="quantity-group">
-        <button (click)="handleQuantity('min')">-</button>
-        <input type="text" name="" value="{{productQuantity}}">
-        <button (click)="handleQuantity('plus')">+</button>
-      </div>
-    </div>
-  </div>
-</div> -->
+
 <!-- //////////////// -->
 <div class="row product-details" *ngIf="productData">
 <mat-grid-list cols="2" rowHeight="1.5:1">
@@ -39,6 +15,8 @@
       </div>
       <h6>Category : {{productData.category}}</h6>
       <h6>Discription : {{productData.discription}}</h6>
+      <h6>Company Name : {{productData.companyname}}</h6>
+      <h6 style="color: red;">Quantity Available: {{totalQuantity}}</h6>
       <button mat-raised-button class="form-button">Buy Now</button>
       <button *ngIf="!removeCart" mat-raised-button (click)="AddToCart()">Add to Cart</button>
       <button *ngIf="removeCart" mat-raised-button (click)="removeToCart(productData.id)">Remove to Cart</button>
@@ -50,5 +28,19 @@
     </div>
   </mat-grid-tile>
 </mat-grid-list>
+</div>
+
+<!-- //////////////// display related products /////////////////// -->
+  <div class="main">
+    <div class="inner">
+        <mat-card *ngFor="let item of allRelatedProducts">
+            <mat-card-content>
+                <img src="{{item.image}}" alt="">
+            </mat-card-content>
+            <mat-card-footer>
+                <button mat-raised-button routerLink="/details/{{ item.id }}">{{item.companyname}}</button>           
+            </mat-card-footer>
+        </mat-card>
+    </div>
 </div>
 

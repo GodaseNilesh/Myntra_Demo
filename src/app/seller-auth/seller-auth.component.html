@@ -7,6 +7,16 @@
         </mat-card-header>
         <mat-card-content class="mat-card-content">
           <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Company Name</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="companyname"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
             <mat-label>Enter your name</mat-label>
             <input
               matInput
@@ -63,6 +73,16 @@
       <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)">
         <mat-card-content class="mat-card-content">
           <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter your Company Name</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="Ex. pat@example.com"
+              name="companyname"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="mat-form-field">
             <mat-label>Enter your Email</mat-label>
             <input
               type="email"
@@ -82,7 +102,6 @@
               ngModel
             /> </mat-form-field
           ><br />
-          <!-- <a href="" #hello value="hello" name="hello">Hello</a>     -->
           <button mat-raised-button class="mat-button" (click)="check('hello')">Login</button>
           <a class="auth-toggle-link" (click)="openSignUp()"
             >Don't have account? Click to Sign Up

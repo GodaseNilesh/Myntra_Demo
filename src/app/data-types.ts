@@ -1,9 +1,11 @@
 export interface SignUp{
+    companyname:string,
     name:string,
     email:string,
     password:string,
 }
 export interface login{
+    companyname:string,
     email:string,
     password:string
 }
@@ -18,9 +20,10 @@ export interface product{
     image:string
     id:number,
     quantity: undefined | number,
-    productId: undefined | number
+    productId: undefined | number,
 }
 export interface cart{
+    companyname:string,
     name:string,
     price:number,
     category:string,
@@ -47,4 +50,7 @@ export interface order{
     totalPrice:number,
     userId:number,
     id:number | undefined
+}
+export interface carousel{
+    image:string
 }

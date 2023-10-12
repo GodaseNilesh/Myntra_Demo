@@ -47,4 +47,53 @@ h6 {
 .image-tile{
   border-right: 2px solid #ddd;
 }
-
+/* /////////////////////////////////// other products ///////////////////////////// */
+.main{
+  width: 100%;
+  height: 380px;
+  border: 1px solid red;
+}
+.inner{
+  width: 100%;
+  height: 85%;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+mat-card{
+  /* margin-top: 20px;; */
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ddd;
+  height: 400px;
+  width: auto;
+}
+mat-card-content{
+  height: 280px;
+  width: 300px;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+  margin-top: 0px;
+}
+mat-card-content img{
+  /* border: 1px solid red; */
+  padding: aut0;
+  height: 250px;
+  width: 300px;
+  object-fit: contain;
+  margin-top: -16px;
+}
+mat-card button{
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 22px;
+}
+mat-card-footer{
+  margin: 0;
+  border: 1px solid red;
+}

@@ -1,11 +1,20 @@
+<!-- <div class="main">
+  <img
+    src="https://www.shutterstock.com/image-photo/redhaired-girl-holding-phone-credit-260nw-1760659871.jpg"
+    alt=""
+  />
+</div> -->
+
+<!-- <hr /> -->
+<!-- ///////////////// carousel for popular products ///////////// -->
 <ngb-carousel *ngIf="popularProducts">
   <ng-template *ngFor="let item of popularProducts" ngbSlide>
     <div class="picsum-img-wrapper">
-		<a routerLink="/details/{{item.id}}">
-      <img
-        class="product-header-img"
-        src="{{ item.image }}"
-        alt="Random first slide"
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          class="product-header-img"
+          src="{{ item.image }}"
+          alt="Random first slide"
       /></a>
     </div>
     <div class="carousel-caption">
@@ -14,58 +23,96 @@
     </div>
   </ng-template>
 </ngb-carousel>
-
-<div class="product-list-wrapper">
+<!-- ///////////////////////// Trendy Products ////////////////////////////// -->
+<div class="trendy-products">
   <h1>Trendy Products</h1>
+  <div class="trendy-products-list">
+    <mat-card *ngFor="let item of trendyProducts">
+      <mat-card-content>
+        <img src="{{ item.image }}" alt="" />
+      </mat-card-content>
+      <mat-card-footer>
+        <h5>{{ item.name }}</h5>
+        <p>Price : {{ item.price }}</p>
+        <button mat-raised-button routerLink="/details/{{ item.id }}">
+          View Details
+        </button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+
+<!-- //////////////////////// Regular products //////////////////////////// -->
+<div class="product-list-wrapper">
+  <h1>Regular Products</h1>
   <div class="products">
     <div class="product-content">
       <div class="product-image">
-        <img src="https://citizenwatch.widen.net/content/cqwu6q9zvt/png/Promaster+Tough.png?u=41zuoe&width=400&height=400&quality=80&crop=false&keep=c&color=FFFFFF00" alt="">
+        <img
+          src="https://citizenwatch.widen.net/content/cqwu6q9zvt/png/Promaster+Tough.png?u=41zuoe&width=400&height=400&quality=80&crop=false&keep=c&color=FFFFFF00"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <p style="display: none;" name="watch"></p>
-        <a (click)="showProductList('Watch')">Watch</a>
+        <p style="display: none" name="watch"></p>
+        <!-- <a (click)="showProductList('Watch')">Watch</a> -->
+        <a routerLink="/shop-by-category/Watch">Watch</a>
       </div>
     </div>
-    <div class="product-content" >
-      <div class="product-image" style="background-color: red;">
-        <img src="https://media.self.com/photos/5dd44cf5d0525b0009f5edf6/4:3/w_2560%2Cc_limit/AdobeStock_208000726.jpeg" alt="">
+    <div class="product-content">
+      <div class="product-image" style="background-color: red">
+        <img
+          src="https://media.self.com/photos/5dd44cf5d0525b0009f5edf6/4:3/w_2560%2Cc_limit/AdobeStock_208000726.jpeg"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <a (click)="showProductList('Glasses')">Glasses</a>
+        <a routerLink="/shop-by-category/Glasses">Glasses</a>
       </div>
     </div>
     <div class="product-content">
       <div class="product-image">
-        <img src="https://5.imimg.com/data5/TG/DN/MY-37294786/designer-artificial-jewellery.jpg" alt="">
+        <img
+          src="https://5.imimg.com/data5/TG/DN/MY-37294786/designer-artificial-jewellery.jpg"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <a (click)="showProductList('Jewellery')">Jewellery</a>
+        <a routerLink="/shop-by-category/Jewellery">Jewellery</a>
       </div>
     </div>
     <div class="product-content">
       <div class="product-image">
-        <img src="https://images.meesho.com/images/products/280402414/kzump_512.webp" alt="">
+        <img
+          src="https://images.meesho.com/images/products/280402414/kzump_512.webp"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <a (click)="showProductList('Cloths')">Cloths</a>
+        <a routerLink="/shop-by-category/Cloths">Cloths</a>
       </div>
     </div>
     <div class="product-content">
       <div class="product-image">
-        <img src="https://rukminim2.flixcart.com/image/300/300/xif0q/shoe/7/2/m/6-tm-12-6-trm-white-original-imagjqyzz8z9jrgf.jpeg?q=90&crop=false" alt="">
+        <img
+          src="https://rukminim2.flixcart.com/image/300/300/xif0q/shoe/7/2/m/6-tm-12-6-trm-white-original-imagjqyzz8z9jrgf.jpeg?q=90&crop=false"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <a (click)="showProductList('Shoes')">Shoes</a>
+        <a routerLink="/shop-by-category/Shoes">Shoes</a>
       </div>
     </div>
     <div class="product-content">
       <div class="product-image">
-        <img src="https://m.media-amazon.com/images/I/41kyuER2HjL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <img
+          src="https://m.media-amazon.com/images/I/41kyuER2HjL._SX300_SY300_QL70_FMwebp_.jpg"
+          alt=""
+        />
       </div>
       <div class="product-links">
-        <a (click)="showProductList('Mobiles')">Mobiles</a>
+        <a routerLink="/shop-by-category/Mobile">Mobile</a>
       </div>
     </div>
-    </div>
+  </div>
 </div>

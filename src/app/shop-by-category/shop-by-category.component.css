@@ -1,0 +1,54 @@
+.main{
+    width: 100%;
+    height: 380px;
+    /* border: 1px solid red; */
+}
+.main h1{
+    margin: 4px 0 4px 0px;
+    padding: 0;
+}
+.inner{
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+mat-card{
+    margin-top: 20px;;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ddd;
+    height: 400px;
+    width: auto;
+}
+mat-card-content{
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid blue; */
+    margin: 0;
+    padding: 0;
+    margin-top: 0px;
+}
+mat-card-content img{
+    /* border: 1px solid red; */
+    padding: aut0;
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    margin-top: -16px;
+}
+mat-card button{
+    text-align: center;
+    margin-bottom: 0px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 22px;
+}
+/* mat-card img{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-radius: 30px;
+} */

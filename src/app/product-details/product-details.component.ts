@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { cart, product } from '../data-types';
-import { faL } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product-details',
@@ -12,9 +11,11 @@ import { faL } from '@fortawesome/free-solid-svg-icons';
 export class ProductDetailsComponent {
   productData: undefined | product;
   productQuantity: number = 1;
+  totalQuantity: undefined | number;
+  productCategory:string | undefined;
   removeCart = false;
   cartData :product | undefined;
-
+  allRelatedProducts : product[]=[];
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -22,12 +23,25 @@ export class ProductDetailsComponent {
   ) {}
 
   ngOnInit(): void {
+    //get product id from url and fetch product data from json
     let productId = this.activeRoute.snapshot.paramMap.get('productId');
-    productId &&
-      this.product.getProduct(productId).subscribe((result) => {
+    console.log(productId);
+
+    productId && this.product.getProduct(productId).subscribe((result) => {
         this.productData = result;
 
-        let cartData = localStorage.getItem('localCart');
+        //fetching all other products of same category
+        this.productCategory=this.productData.category;
+        this.product.searchByCategory(this.productCategory).subscribe((result)=>{
+          this.allRelatedProducts=result;
+            // console.log(result);
+        })
+
+
+        this.totalQuantity=this.productData.quantity;
+        // console.log(this.totalQuantity);
+
+        let cartData = sessionStorage.getItem('localCart');
         if (productId && cartData) {
           let items = JSON.parse(cartData);
           items = items.filter(
@@ -39,7 +53,7 @@ export class ProductDetailsComponent {
             this.removeCart = false;
           }
         }
-        let user = localStorage.getItem('user');
+        let user = sessionStorage.getItem('user');
         if (user) {
           let userId = user && JSON.parse(user).id;
           this.product.getCartList(userId);
@@ -56,23 +70,27 @@ export class ProductDetailsComponent {
         }
       });
   }
+  
+
   handleQuantity(val: string) {
-    if (this.productQuantity < 20 && val === 'plus') {
+    if(this.totalQuantity){
+    if (this.productQuantity < this.totalQuantity && val === 'plus') {
       this.productQuantity += 1;
     } else if (this.productQuantity > 1 && val === 'min') {
       this.productQuantity -= 1;
     }
   }
+  }
   AddToCart() {
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
-      if (!localStorage.getItem('user')) {
+      if (!sessionStorage.getItem('user')) {
         // console.log(this.productData);
         this.product.localAddToCart(this.productData);
         this.removeCart = true;
       } else {
         // console.warn("user logged in")
-        let user = localStorage.getItem('user');
+        let user = sessionStorage.getItem('user');
         let userId = user && JSON.parse(user).id;
         // console.warn(userId);
         let cartData: cart = {
@@ -93,10 +111,10 @@ export class ProductDetailsComponent {
   }
 
   removeToCart(productId: number) {
-    if (!localStorage.getItem('user')) {
+    if (!sessionStorage.getItem('user')) {
       this.product.removeItemFromCart(productId);
     } else {
-      let user = localStorage.getItem('user');
+      let user = sessionStorage.getItem('user');
       let userId = user && JSON.parse(user).id;
       console.warn(this.cartData);
       this.cartData && this.product.removeToCart(this.cartData.id)
@@ -108,4 +126,5 @@ export class ProductDetailsComponent {
       this.removeCart = false;
     }
   }
+
 }

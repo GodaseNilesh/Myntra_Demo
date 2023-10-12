@@ -43,8 +43,8 @@ authError:string='';
   }
 
   localCartToRemoteCart(){
-    let data=localStorage.getItem('localCart');
-    let user=localStorage.getItem('user');
+    let data=sessionStorage.getItem('localCart');
+    let user=sessionStorage.getItem('user');
     let userId=user && JSON.parse(user).id;
     if(data){
       let cartDataList:product[]=JSON.parse(data);
@@ -63,7 +63,7 @@ authError:string='';
           }
       })
       if(cartDataList.length===index+1){
-        localStorage.removeItem('localCart');
+        sessionStorage.removeItem('localCart');
       }
        }, 500);
       });

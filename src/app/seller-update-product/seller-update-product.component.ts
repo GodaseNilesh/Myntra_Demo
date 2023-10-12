@@ -28,6 +28,7 @@ export class SellerUpdateProductComponent {
     }
     this.product.updateProduct(data).subscribe((result) => {
       if (result) {
+        console.log(result);
         this.productMessage = 'Product has updated';
       }
     });

@@ -27,6 +27,8 @@ priceSummary:priceSummary={
   ngOnInit(): void {
     this.product.currentCart().subscribe((result)=>{
       this.cartData=result;
+      console.log("cartdata",this.cartData);
+
       let price=0;
       result.forEach((item)=>{
         if(item.quantity){

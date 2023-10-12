@@ -1,11 +1,61 @@
+.main{
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+}
+.main img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .product-header-img {
   object-fit: contain;
   height: 600px;
   width: 100%;
 }
 .divider{color: black;}
-/* /////////////////////////////////////////////////////////////////// */
+
+/* /////////////////////// Trendy product CSS ////////////////////////// */
+.trendy-products{
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 500px;
+}
+.trendy-products h1{
+  margin-top: 10px;
+}
+
+.trendy-products mat-card{
+  height: auto;
+  width: 19%;
+  border: 1px solid #ddd;
+} 
+mat-card-content img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: auto;
+  padding: auto;
+}
+mat-card-footer h5,p{
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+mat-card-footer button{
+  width: 100%;
+  background-color: aliceblue;
+  /* font-weight: 500; */
+}
+.trendy-products-list{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* /////////////////////// regular product CSS ////////////////////// */
 .product-list-wrapper{
+  margin-bottom: 20px;
   width: 100%;
   /* border: 1px solid red; */
   height: 320px;
@@ -18,6 +68,8 @@
 .products{
   display: flex;
   justify-content: space-around;
+  /* border: 1px solid green; */
+  height: 80%;
 }
 .product-content{
   width: 250px;
@@ -42,9 +94,11 @@
   object-fit: cover;
 }
 .product-links {display: flex;}
-.product-links a,button{
+.product-links a{
   margin: auto;
   font-weight: 500;
+  color: black;
+  text-decoration: none;
 }
 .product-links a:hover{
   color: green;

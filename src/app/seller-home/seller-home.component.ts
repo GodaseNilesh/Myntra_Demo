@@ -12,10 +12,21 @@ export class SellerHomeComponent implements OnInit {
   public displayColumns : string[] = ['image','name','price','color','category','action']
   public dataSource : product[] = []
   productMessage: undefined | string;
-  
+  sellerName:string='';
+  companyName:string='';
+
   constructor(private product: ProductService) {}
   ngOnInit(): void {
-    this.list();
+    if (sessionStorage.getItem('seller')) {
+      let sellerStore = sessionStorage.getItem('seller');
+      console.log(sellerStore);
+      let sellerData = sellerStore && JSON.parse(sellerStore);//[0]
+      // console.log(sellerData);
+      this.companyName=sellerData.companyname;
+      console.log(this.companyName);
+    }
+    // this.list();
+    this.listByCompany(this.companyName);
   }
   deleteProduct(id: number) {
     console.warn('text id', id);
@@ -35,5 +46,13 @@ export class SellerHomeComponent implements OnInit {
       this.productList = result;
       this.dataSource=result;
     });
+  }
+
+  listByCompany(companyName:string){
+    this.product.productListByCompanyName(companyName).subscribe((result)=>{
+      console.log(result);
+      this.productList = result;
+      this.dataSource=result;
+    })
   }
 }

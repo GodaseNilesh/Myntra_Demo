@@ -21,7 +21,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material/angular-material.module';
 import { FooterComponent } from './footer/footer.component';
-import { ProductListComponent } from './product-list/product-list.component'
+import { ProductListComponent } from './product-list/product-list.component';
+import { ShopByCategoryComponent } from './shop-by-category/shop-by-category.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ProductListComponent } from './product-list/product-list.component'
     CheckoutComponent,
     MyOrdersComponent,
     FooterComponent,
-    ProductListComponent
+    ProductListComponent,
+    ShopByCategoryComponent
   ],
   imports: [
     BrowserModule,

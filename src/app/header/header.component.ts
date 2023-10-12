@@ -19,14 +19,16 @@ export class HeaderComponent {
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
-        if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          let sellerStore = localStorage.getItem('seller');
-          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+        if (sessionStorage.getItem('seller') && val.url.includes('seller')) {
+          // console.log(val.url);
+          let sellerStore = sessionStorage.getItem('seller');
+          // console.log(sellerStore);
+          let sellerData = sellerStore && JSON.parse(sellerStore);
           this.sellerName = sellerData.name;
           this.menuType = 'seller';
 
-        } else if (localStorage.getItem('user')) {
-          let userStore = localStorage.getItem('user');
+        } else if (sessionStorage.getItem('user')) {
+          let userStore = sessionStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
@@ -37,8 +39,8 @@ export class HeaderComponent {
         }
       }
     });
-
-    let cartData=localStorage.getItem('localCart');
+    
+    let cartData=sessionStorage.getItem('localCart');
     if(cartData){
       this.cartItems=JSON.parse(cartData).length;
     }
@@ -47,11 +49,11 @@ export class HeaderComponent {
     })
   }
   logout() {
-    localStorage.removeItem('seller');
+    sessionStorage.removeItem('seller');
     this.route.navigate(['/']);
   }
   userLogOut(){
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
     this.route.navigate(['/user-auth'])
     this.product.cartData.emit([]);
   }

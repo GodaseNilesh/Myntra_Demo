@@ -18,12 +18,12 @@ export class SellerService {
       .post('http://localhost:3000/seller', data, { observe: 'response' })
       .subscribe((result) => {
         this.isSellerLoggedIn.next(true);
-        localStorage.setItem('seller', JSON.stringify(result.body));
+        sessionStorage.setItem('seller', JSON.stringify(result.body));
         this.router.navigate(['seller-home']);
       });
   }
   reloadSeller() {
-    if (localStorage.getItem('seller')) {
+    if (sessionStorage.getItem('seller')) {
       this.isSellerLoggedIn.next(true);
       this.router.navigate(['seller-home']);
     }
@@ -39,7 +39,7 @@ export class SellerService {
         console.warn(result);
         if (result && result.body && result.body.length) {
           console.warn('user loged in');
-          localStorage.setItem('seller', JSON.stringify(result.body));
+          sessionStorage.setItem('seller', JSON.stringify(result.body[0]));
           this.router.navigate(['seller-home']);
         } else {
           console.warn('login failed');

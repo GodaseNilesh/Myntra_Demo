@@ -13,9 +13,10 @@ import CartPageComponent from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ShopByCategoryComponent } from './shop-by-category/shop-by-category.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'seller-auth', component: SellerAuthComponent },
   {
     path: 'seller-home',
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     component:ProductListComponent,
     path:'product-list'
+  },
+  {
+    component:ShopByCategoryComponent,
+    path:'shop-by-category/:category'
   }
 ];
 
