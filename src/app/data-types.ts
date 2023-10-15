@@ -10,7 +10,7 @@ export interface login{
     password:string
 }
 export interface product{
-    forEach(arg0: (product: product) => void): unknown
+    // forEach(arg0: (product: product) => void): unknown
     companyname:string,
     name:string,
     price:number,
@@ -18,7 +18,7 @@ export interface product{
     color:string,
     discription:string,
     image:string
-    id:number,
+    id:number
     quantity: undefined | number,
     productId: undefined | number,
 }
@@ -44,12 +44,14 @@ export interface priceSummary{
     total : number
 }
 export interface order{
+    quantity : string | number
     email:string,
     address:string,
     contact:string,
     totalPrice:number,
     userId:number,
-    id:number | undefined
+    id:number | undefined,
+    productId :number | undefined
 }
 export interface carousel{
     image:string

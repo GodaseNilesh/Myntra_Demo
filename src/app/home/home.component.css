@@ -1,7 +1,14 @@
 .main{
   width: 100%;
-  height: auto;
-  border: 1px solid red;
+  background-image: url('https://pbs.twimg.com/media/EjJ9Z5cVkAAGe1c.jpg');
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  /* border: 1px solid red; */
+  margin-top: -16px;
 }
 .main img{
   width: 100%;
@@ -15,20 +22,30 @@
 }
 .divider{color: black;}
 
+
+ngb-carousel{
+  margin-top: 20px;
+}
 /* /////////////////////// Trendy product CSS ////////////////////////// */
-.trendy-products{
+
+.trendy-products,.most-selled-product{
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
   width: 100%;
   /* border: 1px solid red; */
-  height: 500px;
+  height: auto;
 }
-.trendy-products h1{
+.trendy-products h1,.most-selled-product h1{
   margin-top: 10px;
 }
 
-.trendy-products mat-card{
+.trendy-products mat-card , .most-selled-product mat-card{
   height: auto;
   width: 19%;
   border: 1px solid #ddd;
+  box-shadow: 0 5px 10px gray;
+  /* padding: 10px 0px; */
 } 
 mat-card-content img{
   width: 100%;
@@ -47,10 +64,17 @@ mat-card-footer button{
   background-color: aliceblue;
   /* font-weight: 500; */
 }
-.trendy-products-list{
+.trendy-products-list,.selled-products-list{
   display: flex;
   justify-content: space-around;
 }
+
+/* /////////////////// most selled products ///////////////////////////// */
+/* .most-selles-product{
+  width: 100%;
+  height: auto;
+  
+} */
 
 
 /* /////////////////////// regular product CSS ////////////////////// */
@@ -58,6 +82,7 @@ mat-card-footer button{
   margin-bottom: 20px;
   width: 100%;
   /* border: 1px solid red; */
+  margin-top: 20px;
   height: 320px;
 }
 .product-list-wrapper h1{

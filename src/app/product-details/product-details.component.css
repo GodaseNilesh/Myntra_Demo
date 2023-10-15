@@ -1,7 +1,22 @@
-mat-grid-list {
-  margin: 0;
+.product-details {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
   padding: 0;
+  width: 100%;
   /* border: 1px solid red; */
+}
+mat-grid-list {
+  margin: auto;
+  margin-bottom: 0;
+  padding: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+mat-grid-tile{
+  border-radius: 10px;
 }
 .product-image {
   width: 100%;
@@ -9,17 +24,10 @@ mat-grid-list {
   object-fit: contain;
 }
 .product-color {
-  border: 3px solid #000;
+  /* border: 3px solid #000; */
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
-.product-details {
-  margin-top: 10px;
-  margin-bottom: 80px;
-}
-h1 {
-  margin-top: 0px;
 }
 h1,
 h5,
@@ -37,21 +45,24 @@ h6 {
   width: 50px;
   padding: 10px;
 }
-
-.vertical-line{
-  width: 20px;
-  height: auto;
-  border: 1px solid red;
-  background-color: red;
-}
 .image-tile{
-  border-right: 2px solid #ddd;
+  /* border: 1px solid green; */
+  border-radius: 10px;
+  /* margin: 10px; */
 }
 /* /////////////////////////////////// other products ///////////////////////////// */
+.relatedProducts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border: 1px solid red; */
+  padding: 0;
+}
 .main{
   width: 100%;
-  height: 380px;
-  border: 1px solid red;
+  height: auto;
+  margin: 20px 0px;
+  padding: 10px;
+  /* border: 1px solid red; */
 }
 .inner{
   width: 100%;
@@ -59,20 +70,21 @@ h6 {
   /* border: 1px solid green; */
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: -10px;
+  border-radius: 10px;
 }
 mat-card{
-  /* margin-top: 20px;; */
-  display: flex;
-  justify-content: space-around;
+  margin: 5px;
+  padding: 0;
   border: 1px solid #ddd;
-  height: 400px;
-  width: auto;
+  height: auto;
+  width: 19%;
+  border-radius: 10px;
 }
 mat-card-content{
   height: 280px;
-  width: 300px;
-  border: 1px solid blue;
+  width: auto;
+  /* border: 1px solid blue; */
   margin: 0;
   padding: 0;
   margin-top: 0px;
@@ -87,6 +99,7 @@ mat-card-content img{
 }
 mat-card button{
   text-align: center;
+  border-top: 1px solid black;
   margin-bottom: 0px;
   margin-top: 0;
   width: 100%;
@@ -95,5 +108,5 @@ mat-card button{
 }
 mat-card-footer{
   margin: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }

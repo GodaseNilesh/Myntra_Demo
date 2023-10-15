@@ -1,7 +1,7 @@
 
 <!-- //////////////// -->
 <div class="row product-details" *ngIf="productData">
-<mat-grid-list cols="2" rowHeight="1.5:1">
+<mat-grid-list cols="2" rowHeight="1.4:1">
   <mat-grid-tile class="image-tile">
       <img class="product-image" src="{{ productData.image }}" alt="" />
   </mat-grid-tile>
@@ -29,9 +29,10 @@
   </mat-grid-tile>
 </mat-grid-list>
 </div>
-
+<mat-divider></mat-divider>
 <!-- //////////////// display related products /////////////////// -->
-  <div class="main">
+<h1 class="relatedProducts">Related Products</h1>  
+<div class="main">
     <div class="inner">
         <mat-card *ngFor="let item of allRelatedProducts">
             <mat-card-content>

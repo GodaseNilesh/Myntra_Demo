@@ -40,7 +40,7 @@ priceSummary:priceSummary={
       this.priceSummary.tax=price/10;
       this.priceSummary.delivery=100;
       this.priceSummary.total=price+(price/10)+100-(price/10);
-      console.log(this.priceSummary);
+      console.log("price summary",this.priceSummary);
     })
   }
 

@@ -98,6 +98,7 @@ export class ProductDetailsComponent {
           userId,
           productId: this.productData.id,
         };
+        
         delete cartData.id;
         // console.log(cartData);
         this.product.addToCart(cartData).subscribe((result) => {

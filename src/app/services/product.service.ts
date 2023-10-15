@@ -49,6 +49,12 @@ export class ProductService {
   getProduct(id: string) {
     return this.http.get<product>(`http://localhost:3000/products/${id}`);
   }
+
+  getProducts(id: string) {
+    return this.http.get<product[]>(`http://localhost:3000/products/${id}`);
+  }
+
+
   updateProduct(product: product) {
     return this.http.put<product>(
       `http://localhost:3000/products/${product.id}`,
@@ -145,5 +151,10 @@ export class ProductService {
   }
   cancelOrder(orderId:number){
     return this.http.delete('http://localhost:3000/orders/'+orderId);
+  }
+
+  //show sold product order list from orders data (json-server)
+  soldProduct(){
+    return this.http.get<product>('http://localhost:3000/orders');
   }
 }

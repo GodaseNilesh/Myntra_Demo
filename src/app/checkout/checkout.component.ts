@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, numberAttribute } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { cart, order, product } from '../data-types';
 import { Router } from '@angular/router';
@@ -11,8 +11,10 @@ import { Router } from '@angular/router';
 export class CheckoutComponent {
 // cartData: undefined | cart[]
 totalPrice:number | undefined;
+quantity :string | any;
 cartData:cart[]=[] ;
 orderMsg:string | undefined;
+productId :number |undefined;
 
 companyData:product[]=[];
 companyname:undefined | string;
@@ -31,6 +33,9 @@ companyname:undefined | string;
 
       result.forEach((item)=>{
         if(item.quantity){
+          this.quantity=item.quantity;////////////////////////////////////////
+          console.log("quantity",this.quantity);
+          this.productId=item.productId;
         price=price+(+item.price*+item.quantity);
         }
       });
@@ -43,13 +48,18 @@ companyname:undefined | string;
   orderNow(data:{email:string,address:string,contact:string}){
      let user=sessionStorage.getItem('user');
      let userId=user && JSON.parse(user).id;
+    
      if(this.totalPrice){
       let orderData:order={
         ...data,
         totalPrice:this.totalPrice,
-        userId,
-        id:undefined
+        quantity:this.quantity,
+        userId:userId,
+        id:undefined,
+        productId:this.productId
       }
+
+      console.log("orderdata",orderData);
       this.cartData?.forEach((item)=>{
         setTimeout(() => {
          item.id && this.product.deleteCartItems(item.id);
@@ -75,7 +85,7 @@ companyname:undefined | string;
     //  let name = this.cartData[0];
      this.companyname=name.companyname; 
 
-     //fetch data from api with the help of company name
+     //fetch data from api with the help of company name for update product quantity after sold product
      this.product.productListByCompanyName(this.companyname).subscribe((result)=>{
        if(result){
          this.companyData=result;

@@ -55,6 +55,13 @@
       "email": "cotton@gmail.com",
       "password": "1234",
       "id": 8
+    },
+    {
+      "companyname": "",
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 9
     }
   ],
   "products": [
@@ -66,7 +73,7 @@
       "category": "Watch",
       "discription": "a men's smart watch",
       "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
-      "quantity": 2,
+      "quantity": 6,
       "id": 1
     },
     {
@@ -76,8 +83,8 @@
       "color": "Golden",
       "category": "Watch",
       "discription": "a men's watch",
-      "image": "https://m.media-amazon.com/images/I/71KxuRv3-fL._UY679_.jpg",
-      "quantity": 6,
+      "image": "https://banner2.cleanpng.com/20180618/cfc/kisspng-rolex-submariner-rolex-day-date-analog-watch-titan-watches-ltd-5b27ac00202744.6775393415293265921317.jpg",
+      "quantity": 3,
       "id": 2
     },
     {
@@ -99,7 +106,7 @@
       "category": "Glasses",
       "discription": "Recangle square glasses",
       "image": "https://partners.lenskart.com/cdn/shop/products/blue-gradient-gold-transparent-full-rim-square-lenskart-studio-hip-hop-lk-s15200-c3-sunglasses_g_0559_21_02_2023_1325x.jpg?v=1684286955",
-      "quantity": 3,
+      "quantity": 1,
       "id": 4
     },
     {
@@ -110,7 +117,7 @@
       "category": "Mobile",
       "discription": "Brand: Samsung Model Name: Samsung Galaxy S23 Ultra Network Service Provider: Unlocked for All Carriers Operating System: Android 13.0 Cellular Technology: 5G",
       "image": "https://m.media-amazon.com/images/I/61VfL-aiToL._SX679_.jpg",
-      "quantity": 4,
+      "quantity": 1,
       "id": 5
     },
     {
@@ -131,8 +138,8 @@
       "color": "Black",
       "category": "Mobile",
       "discription": "From ₹25650.00/mo.Per Month with instant savings§§ and No Cost EMI§Footnote or₹159900.00Footnote‡",
-      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1692845702708",
-      "quantity": 7,
+      "image": "https://jasystore.com/wp-content/uploads/2021/12/apple-iphone-15-1-500x500.jpg",
+      "quantity": 0,
       "id": 7
     },
     {
@@ -142,7 +149,7 @@
       "color": "Blue",
       "category": "Mobile",
       "discription": "Super Retina XDR Display Advanced Dual Camera System A15 Bionic Chip",
-      "image": "https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UY327_FMwebp_QL65_.jpg",
+      "image": "https://techryn.com/wp-content/uploads/2020/09/iPhone-13-leaks.jpg",
       "quantity": 8,
       "id": 8
     },
@@ -154,7 +161,7 @@
       "category": "Shoes",
       "discription": "Sole: Rubber\nClosure: Lace-Up\nShoe Width: Medium\nNIKE AIR WINFLO 10 MEN'S RUNNING SHOES\nNIKE MEN'S RUNNING SHOES",
       "image": "https://m.media-amazon.com/images/I/41ru8AsTw3L._UY695_.jpg",
-      "quantity": 9,
+      "quantity": 3,
       "id": 9
     },
     {
@@ -176,7 +183,7 @@
       "color": "Black and Gray",
       "discription": "SizeS, M, L, XL\nFabric TypeCotton\nColorMulticolor\nSpeacialityBreathable, Eco-Friendly, Quick Dry\nPatternChecked\nOccasionCasual Wear, Party Wea",
       "image": "https://img2.exportersindia.com/product_images/bc-full/2019/7/6510916/mens-checked-cotton-shirt-1564384006-5020027.jpeg",
-      "quantity": 5,
+      "quantity": 2,
       "id": 11
     }
   ],
@@ -200,69 +207,37 @@
       "id": 3
     }
   ],
-  "cart": [
+  "cart": [],
+  "orders": [
     {
-      "companyname": "Samsung",
-      "name": "Samsung Galaxy S23 Ultra 5G",
-      "price": "121999",
-      "color": "Green",
-      "category": "Mobile",
-      "discription": "Brand: Samsung Model Name: Samsung Galaxy S23 Ultra Network Service Provider: Unlocked for All Carriers Operating System: Android 13.0 Cellular Technology: 5G",
-      "image": "https://m.media-amazon.com/images/I/61VfL-aiToL._SX679_.jpg",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 4100,
+      "quantity": 2,
+      "userId": 2,
+      "productId": 1,
+      "id": 1
+    },
+    {
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 122099,
       "quantity": 1,
       "userId": 2,
       "productId": 5,
-      "id": 1
-    }
-  ],
-  "orders": [
-    {
-      "email": "peter@gmail.com",
-      "address": "abcd",
-      "contact": "9999",
-      "totalPrice": 2100,
-      "userId": 1,
       "id": 2
     },
     {
       "email": "",
       "address": "",
       "contact": "",
-      "totalPrice": 4100,
-      "userId": 2,
+      "totalPrice": 46200,
+      "quantity": 1,
+      "userId": 1,
+      "productId": 6,
       "id": 3
-    },
-    {
-      "email": "",
-      "address": "",
-      "contact": "",
-      "totalPrice": 6100,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "email": "",
-      "address": "",
-      "contact": "",
-      "totalPrice": 4500,
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "email": "",
-      "address": "",
-      "contact": "",
-      "totalPrice": 3500,
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "email": "",
-      "address": "",
-      "contact": "",
-      "totalPrice": 3500,
-      "userId": 2,
-      "id": 7
     }
   ]
 }

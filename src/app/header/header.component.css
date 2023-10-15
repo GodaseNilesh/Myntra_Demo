@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: green;
-  color: white;
+  background-color: rgb(232, 136, 41);
+  color: black;
   height: 65px;
   align-items: center;
+  font-weight: 500;
 }
 .navbar h1 a {
-  color: white;
+  color: black;
   margin: 0;
   font-size: 40px;
   text-decoration: none;
@@ -26,8 +27,9 @@
 
 .navbar li a {
   text-decoration: none;
-  color: white;
+  color: black;
   cursor: pointer;
+  font-size: 20px;
 }
 .navbar .nav-search {
   flex: 1;
