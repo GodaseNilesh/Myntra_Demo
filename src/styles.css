@@ -63,11 +63,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* //////////////////// mat card /////////////// */
 
 .mat-card{
-  border: 1px solid red;
   width: auto;
   height: auto;
-  margin: 5% 35%;
-  box-shadow: 0 4px 6px rgba(193, 53, 53, 0.1);
+  padding: 5px;
+  margin: 10px;
 }
 .mat-card-header h1{
   text-align: center;
@@ -86,13 +85,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-button{
   width: 90%;
   margin: 0 5%;
+  margin-bottom: 20px;
 }
 .auth-toggle-link{
   text-align: center;
-  padding-left: 70px;
+  padding-left: 40px;
   padding-bottom: 10px;
-  padding-top: 100px;
+  padding-top: 10px;
   cursor: pointer;
   color: blueviolet;
+  width: 100%;
+  font-size: 16px;
 }
 

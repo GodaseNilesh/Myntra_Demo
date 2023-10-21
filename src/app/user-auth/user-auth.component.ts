@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SignUp, cart, login, product } from '../data-types';
+import { SignUp, cart, login, product, profile } from '../data-types';
 import { UserService } from '../services/user.service';
 import { ProductService } from '../services/product.service';
 
@@ -11,6 +11,7 @@ import { ProductService } from '../services/product.service';
 export class UserAuthComponent {
 showLogin:boolean=true;
 authError:string='';
+allUserData:SignUp[]|undefined;
 
   constructor(private user:UserService,private product:ProductService){
 
@@ -18,9 +19,19 @@ authError:string='';
 
   ngOnInit(): void {
     this.user.userAuthReload();
+    this.user.getAllUserData().subscribe((result:any)=>{
+      this.allUserData=result;
+    })
   }
-  signUp(data:SignUp){
-    this.user.userSignUp(data);
+  signUp(data:profile){
+    // this.allUserData?.forEach((item)=>{
+    //   if(item.email==data.email){
+    //     console.log("email register");
+    //   }else{
+        this.user.userSignUp(data);
+    //   }
+    // })
+    
   }
   login(data:login){
     // console.warn(data);
@@ -52,8 +63,9 @@ authError:string='';
       cartDataList.forEach((product: product,index) => {
         let cartData:cart={
           ...product,
-          productId:product.id,
-          userId
+          productId: product.id,
+          userId,
+          selected: false
         };
         delete cartData.id;
        setTimeout(() => {

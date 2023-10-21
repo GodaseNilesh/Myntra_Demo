@@ -16,51 +16,100 @@
   "seller": [
     {
       "companyname": "Noise",
-      "name": "Nilesh",
-      "email": "nilesh@gmail.com",
+      "name": "Noise",
+      "email": "noise@gmail.com",
       "password": "1234",
       "id": 1
     },
     {
       "companyname": "Samsung",
-      "name": "peter",
-      "email": "peter@gmail.com",
+      "name": "Samsung",
+      "email": "samsung@gmail.com",
       "password": "1234",
       "id": 2
     },
     {
       "companyname": "iPhone",
-      "name": "Tony",
-      "email": "tony@gmail.com",
+      "name": "iPhone",
+      "email": "iphone@gmail.com",
       "password": "1234",
       "id": 3
     },
     {
       "companyname": "Nokia",
-      "name": "Ganesh",
-      "email": "ganesh@gmail.com",
+      "name": "Nokia",
+      "email": "nokia@gmail.com",
       "password": "1234",
       "id": 4
     },
     {
       "companyname": "Nike",
-      "name": "Raju",
-      "email": "raju@gmail.com",
+      "name": "Nike",
+      "email": "Nike@gmail.com",
       "password": "1234",
       "id": 7
     },
     {
       "companyname": "Cotton",
-      "name": "Chetan",
+      "name": "Cotton",
       "email": "cotton@gmail.com",
       "password": "1234",
       "id": 8
     },
     {
-      "companyname": "",
-      "name": "",
-      "email": "",
-      "password": "",
+      "companyname": "Titan",
+      "name": "Titan",
+      "email": "titan@gmail.com",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "companyname": "Sonata",
+      "name": "Sonata",
+      "email": "sonata@gmail.com",
+      "password": "1234",
+      "id": 10
+    },
+    {
+      "companyname": "Lenscart",
+      "name": "Lenscart",
+      "email": "lenscart@gmail.com",
+      "password": "1234",
+      "id": 11
+    },
+    {
+      "companyname": "Leather",
+      "name": "Leather",
+      "email": "leather@gmail.com",
+      "password": "1234",
+      "id": 12
+    },
+    {
+      "companyname": "PNG",
+      "name": "PNG",
+      "email": "png@gmail.com",
+      "password": "1234",
+      "id": 13
+    },
+    {
+      "companyname": "Malabar Gold",
+      "name": "Malabar Gold",
+      "email": "malabargold@gmail.com",
+      "password": "1234",
+      "id": 14
+    },
+    {
+      "companyname": "WD Elements",
+      "name": "Ed Elements",
+      "email": "wdelements@gmail.com",
+      "password": "1234",
+      "id": 15
+    },
+    {
+      "companyname": "SanDisk",
+      "name": "Sandisk",
+      "email": "sandisk@gmail.com",
+      "password": "1234",
       "id": 9
     }
   ],
@@ -73,7 +122,7 @@
       "category": "Watch",
       "discription": "a men's smart watch",
       "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
-      "quantity": 6,
+      "quantity": 0,
       "id": 1
     },
     {
@@ -84,7 +133,7 @@
       "category": "Watch",
       "discription": "a men's watch",
       "image": "https://banner2.cleanpng.com/20180618/cfc/kisspng-rolex-submariner-rolex-day-date-analog-watch-titan-watches-ltd-5b27ac00202744.6775393415293265921317.jpg",
-      "quantity": 3,
+      "quantity": 2,
       "id": 2
     },
     {
@@ -94,8 +143,8 @@
       "color": "Golden",
       "category": "Watch",
       "discription": "a men's watch",
-      "image": "https://m.media-amazon.com/images/I/71mG-2RT7NL._UY679_.jpg",
-      "quantity": 2,
+      "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/watch/u/3/n/-original-imagqfwakmkzwf27.jpeg?q=90",
+      "quantity": 1,
       "id": 3
     },
     {
@@ -105,7 +154,7 @@
       "color": "Blue",
       "category": "Glasses",
       "discription": "Recangle square glasses",
-      "image": "https://partners.lenskart.com/cdn/shop/products/blue-gradient-gold-transparent-full-rim-square-lenskart-studio-hip-hop-lk-s15200-c3-sunglasses_g_0559_21_02_2023_1325x.jpg?v=1684286955",
+      "image": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/Black-Full-Rim-Aviator-Lenskart-Air-Flex-LA-E11483-C1-Eyeglasses_lenskart-air-la-e11483-c1-eyeglasses_g_296007_02_2022.jpg",
       "quantity": 1,
       "id": 4
     },
@@ -127,30 +176,30 @@
       "color": "Green",
       "category": "Mobile",
       "discription": "Size: 8GB RAM + 128GB Storage Style Name: without offer Brand: Samsung Model Name: Samsung Galaxy S22 5G Network Service Provider: Unlocked for All Carriers Operating System: Android 12.0 Cellular Technology: 5G",
-      "image": "https://m.media-amazon.com/images/I/41d5buTYPVL._SX679_.jpg",
+      "image": "https://m.media-amazon.com/images/I/41QPv5h1veL._SX300_SY300_QL70_FMwebp_.jpg",
       "quantity": 2,
       "id": 6
     },
     {
       "companyname": "iPhone",
       "name": "iPhone 15 pro max",
-      "price": "1,59,200",
+      "price": "159200",
       "color": "Black",
       "category": "Mobile",
       "discription": "From ₹25650.00/mo.Per Month with instant savings§§ and No Cost EMI§Footnote or₹159900.00Footnote‡",
       "image": "https://jasystore.com/wp-content/uploads/2021/12/apple-iphone-15-1-500x500.jpg",
-      "quantity": 0,
+      "quantity": "0",
       "id": 7
     },
     {
       "companyname": "iPhone",
       "name": "Apple iPhone 13",
-      "price": "48,999",
+      "price": "48999",
       "color": "Blue",
       "category": "Mobile",
       "discription": "Super Retina XDR Display Advanced Dual Camera System A15 Bionic Chip",
       "image": "https://techryn.com/wp-content/uploads/2020/09/iPhone-13-leaks.jpg",
-      "quantity": 8,
+      "quantity": "8",
       "id": 8
     },
     {
@@ -177,22 +226,290 @@
     },
     {
       "companyname": "Cotton",
-      "category": "Cloths",
       "name": "Mens checked cotton shirt",
       "price": "600",
-      "color": "Black and Gray",
+      "color": "Black ",
+      "category": "Cloths",
       "discription": "SizeS, M, L, XL\nFabric TypeCotton\nColorMulticolor\nSpeacialityBreathable, Eco-Friendly, Quick Dry\nPatternChecked\nOccasionCasual Wear, Party Wea",
       "image": "https://img2.exportersindia.com/product_images/bc-full/2019/7/6510916/mens-checked-cotton-shirt-1564384006-5020027.jpeg",
-      "quantity": 2,
+      "quantity": 1,
       "id": 11
+    },
+    {
+      "companyname": "Cotton",
+      "name": "Slim Fit T-Shirts",
+      "price": "600",
+      "color": "Gray",
+      "category": "Cloths",
+      "discription": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "quantity": "4",
+      "id": 12
+    },
+    {
+      "companyname": "Leather",
+      "name": "Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": "600",
+      "color": "Blue",
+      "category": "Cloths",
+      "discription": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "quantity": "5",
+      "id": 13
+    },
+    {
+      "companyname": "Cotton",
+      "category": "Cloths",
+      "name": "Mens Cotton Jacket",
+      "price": "600",
+      "color": "Brown",
+      "discription": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "quantity": 5,
+      "id": 14
+    },
+    {
+      "companyname": "PNG",
+      "category": "Jewellery",
+      "name": "Silver Dragon Station Chain Bracelet",
+      "price": "1000",
+      "color": "Silver",
+      "discription": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "quantity": 5,
+      "id": 15
+    },
+    {
+      "companyname": "PNG",
+      "category": "Jewellery",
+      "name": "Solid Gold Petite Micropave",
+      "price": "1000",
+      "color": "Silver",
+      "discription": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      "quantity": 5,
+      "id": 16
+    },
+    {
+      "companyname": "Malabar Gold",
+      "category": "Jewellery",
+      "name": "White Gold Plated Princess",
+      "price": "1000",
+      "color": "Silver",
+      "discription": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+      "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+      "quantity": 5,
+      "id": 17
+    },
+    {
+      "companyname": "Malabar Gold",
+      "category": "Jewellery",
+      "name": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": "1000",
+      "color": "red",
+      "discription": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+      "quantity": 5,
+      "id": 18
+    },
+    {
+      "companyname": "WD Elements",
+      "category": "Electronics",
+      "name": "Portable External Hard Drive",
+      "price": "1000",
+      "color": "Black",
+      "discription": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      "quantity": 5,
+      "id": 19
+    },
+    {
+      "companyname": "SanDisk",
+      "category": "Electronics",
+      "name": "SanDisk SSD PLUS 1TB Internal SSD",
+      "price": "1000",
+      "color": "Black",
+      "discription": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "quantity": 5,
+      "id": 20
+    },
+    {
+      "companyname": "SanDisk",
+      "name": "Silicon Power 256GB SSD",
+      "price": "1000",
+      "color": "Black ",
+      "category": "Electronics",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+      "quantity": "5",
+      "id": 21
+    },
+    {
+      "companyname": "Allen Solly",
+      "name": "Allen Solly Men Shirt",
+      "price": "700",
+      "color": "Blue ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/818ttyXNB9L._AC_CR0%2C0%2C0%2C0_SX960_SY720_.jpg",
+      "quantity": "5",
+      "id": 22
+    },
+    {
+      "companyname": "Allen Solly",
+      "name": "Allen Solly Men Shirt",
+      "price": "700",
+      "color": "Blue ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/71ac4lX5hOL._AC_CR0%2C0%2C0%2C0_SX960_SY720_.jpg",
+      "quantity": "5",
+      "id": 23
+    },
+    {
+      "companyname": "Allen Solly",
+      "name": "Allen Solly Men Shirt",
+      "price": "700",
+      "color": "Blue ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/81KadWWsGTL._SY550._SX._UX._SY._UY_.jpg",
+      "quantity": "5",
+      "id": 24
+    },
+    {
+      "companyname": "Dennis Lingo",
+      "name": "Men's solid Slim Fit Cotton Casual Shirt",
+      "price": "700",
+      "color": "Pink ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/51OPx-pHODL._UX522_.jpg",
+      "quantity": "5",
+      "id": 25
+    },
+    {
+      "companyname": "Dennis Lingo",
+      "name": "Men's solid Slim Fit Cotton Casual Shirt",
+      "price": "700",
+      "color": "Pink ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/51A-PAr+mkL._SX522._SX._UX._SY._UY_.jpg",
+      "quantity": "5",
+      "id": 26
+    },
+    {
+      "companyname": "Dennis Lingo",
+      "name": "Men's  Casual Shirt",
+      "price": "700",
+      "color": "Pink ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/61ZbKLlt0sL._UY679_.jpg",
+      "quantity": "5",
+      "id": 27
+    },
+    {
+      "companyname": "Peter England",
+      "name": "Men's  Casual Shirt",
+      "price": "700",
+      "color": "Blue ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/61aGsNUU3sL._AC_UL480_QL65_.jpg",
+      "quantity": "5",
+      "id": 28
+    },
+    {
+      "companyname": "Peter England",
+      "name": "Men's  Casual Shirt",
+      "price": "700",
+      "color": "Pink ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/61MJMLk53+L._AC_UL480_QL65_.jpg",
+      "quantity": "5",
+      "id": 29
+    },
+    {
+      "companyname": "Peter England",
+      "name": "Men's  Casual Shirt",
+      "price": "700",
+      "color": "Blue",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/81eHKPT3WeL._AC_UL480_QL65_.jpg",
+      "quantity": "5",
+      "id": 30
+    },
+    {
+      "companyname": "Fire-Boltt",
+      "name": "Fire Boltt Visionary 1.78",
+      "price": "700",
+      "color": "Blue",
+      "category": "Watch",
+      "discription": "Fire-Boltt Visionary 1.78 AMOLED Bluetooth Calling Smartwatch with 368 * 448 Pixel Resolution, Rotating Crown & 60Hz Refresh Rate 100+ Sports Mode, TWS Connection, Voice Assistance (Black)",
+      "image": "https://m.media-amazon.com/images/I/61Fj5wTOQiL._SX679_.jpg",
+      "quantity": 3,
+      "id": 31
+    },
+    {
+      "companyname": "Fire-Boltt",
+      "name": "Fire Boltt Ninja 3",
+      "price": "700",
+      "color": "Blue",
+      "category": "Watch",
+      "discription": "Fire-Boltt Ninja 3 Smartwatch Full Touch 1.69 & 60 Sports Modes with IP68, Sp02 Tracking, Over 100 Cloud Based Watch Faces (Black)",
+      "image": "https://m.media-amazon.com/images/I/61ZgWdNPmfL._SX679_.jpg",
+      "quantity": "5",
+      "id": 32
+    },
+    {
+      "companyname": "Noise",
+      "name": "Noise Evolve 2",
+      "price": "700",
+      "color": "Blue",
+      "category": "Watch",
+      "discription": "Noise Newly Launched Evolve 2 Play AMOLED Display Smart Watch with Fast Charging, Always On Displa, 50 Sports Modes, Hindi Language Support, Health Suite (Silver Grey)",
+      "image": "https://m.media-amazon.com/images/I/61q0sB6crNL._SX679_.jpg",
+      "quantity": "5",
+      "id": 33
+    },
+    {
+      "companyname": "Ray-Ban",
+      "name": "Ray-Ban RB3857",
+      "price": "700",
+      "color": "Blue",
+      "category": "Glasses",
+      "discription": "Ray-Ban RB3857 Frank Square Sunglasses",
+      "image": "https://m.media-amazon.com/images/I/41hJlCRaB+L._UX679_.jpg",
+      "quantity": "5",
+      "id": 34
+    },
+    {
+      "companyname": "Ray-Ban",
+      "name": "Unisex Gradient Blue",
+      "price": "700",
+      "color": "Blue",
+      "category": "Glasses",
+      "discription": "Ray-Ban Unisex Gradient Blue Lens Pilot Sunglasses - 0RB3025I",
+      "image": "https://m.media-amazon.com/images/I/51TfQcF96FL._UX679_.jpg",
+      "quantity": "5",
+      "id": 35
     }
   ],
   "users": [
     {
-      "name": "peter",
+      "name": "Peter  patil",
       "email": "peter@gmail.com",
-      "password": "abc123",
-      "id": 1
+      "DOB": "2000-10-30",
+      "contact": "9075437740",
+      "address": "Pune",
+      "gender": "Male",
+      "id": 1,
+      "password": "abc123"
     },
     {
       "name": "Nilesh",
@@ -207,7 +524,37 @@
       "id": 3
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "companyname": "Ray-Ban",
+      "name": "Unisex Gradient Blue",
+      "price": "700",
+      "color": "Blue",
+      "category": "Glasses",
+      "discription": "Ray-Ban Unisex Gradient Blue Lens Pilot Sunglasses - 0RB3025I",
+      "image": "https://m.media-amazon.com/images/I/51TfQcF96FL._UX679_.jpg",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 35,
+      "selected": false,
+      "id": 1
+    },
+    {
+      "companyname": "Dennis Lingo",
+      "name": "Men's  Casual Shirt",
+      "price": "700",
+      "color": "Pink ",
+      "category": "Cloths",
+      "discription": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "image": "https://m.media-amazon.com/images/I/61ZbKLlt0sL._UY679_.jpg",
+      "quantity": "2",
+      "userId": 1,
+      "productId": 27,
+      "selected": false,
+      "id": 2
+    }
+  ],
+  "userOrder": [],
   "orders": [
     {
       "email": "",
@@ -238,6 +585,134 @@
       "userId": 1,
       "productId": 6,
       "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 3300,
+      "quantity": 1,
+      "userId": 1,
+      "products": [
+        {
+          "companyname": "Titan",
+          "name": "Watch",
+          "price": "1200",
+          "color": "Golden",
+          "category": "Watch",
+          "discription": "a men's watch",
+          "image": "https://banner2.cleanpng.com/20180618/cfc/kisspng-rolex-submariner-rolex-day-date-analog-watch-titan-watches-ltd-5b27ac00202744.6775393415293265921317.jpg",
+          "quantity": 1,
+          "productId": 2,
+          "userId": 1,
+          "id": 1
+        },
+        {
+          "companyname": "Noise",
+          "name": "Smart Watch",
+          "price": "2000",
+          "color": "Black",
+          "category": "Watch",
+          "discription": "a men's smart watch",
+          "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
+          "quantity": 1,
+          "userId": 1,
+          "productId": 1,
+          "id": 2
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Nilesh",
+      "email": "nilesh@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 1700,
+      "quantity": 1,
+      "userId": 2,
+      "products": [
+        {
+          "companyname": "Sonata",
+          "name": "Watch",
+          "price": "1000",
+          "color": "Golden",
+          "category": "Watch",
+          "discription": "a men's watch",
+          "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/watch/u/3/n/-original-imagqfwakmkzwf27.jpeg?q=90",
+          "quantity": 1,
+          "productId": 3,
+          "userId": 2,
+          "id": 1
+        },
+        {
+          "companyname": "Cotton",
+          "category": "Cloths",
+          "name": "Mens Cotton Jacket",
+          "price": "600",
+          "color": "Brown",
+          "discription": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+          "quantity": 1,
+          "userId": 2,
+          "productId": 14,
+          "id": 3
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Nilesh",
+      "email": "nilesh@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 4100,
+      "quantity": "2",
+      "userId": 2,
+      "products": [
+        {
+          "companyname": "Noise",
+          "name": "Smart Watch",
+          "price": "2000",
+          "color": "Black",
+          "category": "Watch",
+          "discription": "a men's smart watch",
+          "image": "https://m.media-amazon.com/images/I/41UoKKWuxjL._SX300_SY300_QL70_FMwebp_.jpg",
+          "quantity": "2",
+          "userId": 2,
+          "productId": 1,
+          "selected": true,
+          "id": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Nilesh",
+      "email": "nilesh@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 1500,
+      "quantity": "2",
+      "userId": 2,
+      "products": [
+        {
+          "companyname": "Fire-Boltt",
+          "name": "Fire Boltt Ninja 3",
+          "price": "700",
+          "color": "Blue",
+          "category": "Watch",
+          "discription": "Fire-Boltt Ninja 3 Smartwatch Full Touch 1.69 & 60 Sports Modes with IP68, Sp02 Tracking, Over 100 Cloud Based Watch Faces (Black)",
+          "image": "https://m.media-amazon.com/images/I/61ZgWdNPmfL._SX679_.jpg",
+          "quantity": "2",
+          "userId": 2,
+          "productId": 32,
+          "selected": true,
+          "id": 1
+        }
+      ],
+      "id": 7
     }
   ]
 }

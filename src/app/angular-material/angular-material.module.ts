@@ -11,8 +11,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
-// import {} from '@angular/material/te'
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
+
+//for swiper images of products
+import {register } from 'swiper/element/bundle';
+register();
 
 @NgModule({
   declarations: [],
@@ -29,7 +34,11 @@ import {MatDividerModule} from '@angular/material/divider';
     MatGridListModule,
     MatPaginatorModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule,
+    MatRadioModule
+    // SwiperSlide,
+    // SwiperContainer
   ]
 })
 export class AngularMaterialModule { }

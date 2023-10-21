@@ -1,7 +1,22 @@
-.mat-card{
-    border: 1px solid red;
-    width: auto;
-    height: auto;
-    margin: 3% 35%;
-    border-radius: 10px;
-  }
+.mat-card {
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  margin: 5% 20%;
+  box-shadow: 0 2px 5px 0 black;
+}
+.mat-card-content{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+
+}
+.mat-form-field{
+  width: 45%;
+  margin: auto;
+}
+.mat-button{
+  font-size: 20px;
+  border: 1px solid #ddd;
+  color:blueviolet;
+}

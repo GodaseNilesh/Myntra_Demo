@@ -1,47 +1,63 @@
-
 <!-- //////////////// -->
 <div class="row product-details" *ngIf="productData">
-<mat-grid-list cols="2" rowHeight="1.4:1">
-  <mat-grid-tile class="image-tile">
+  <mat-grid-list cols="2" rowHeight="1.4:1">
+    <mat-grid-tile class="image-tile">
       <img class="product-image" src="{{ productData.image }}" alt="" />
-  </mat-grid-tile>
-  <mat-grid-tile class="content-tile">
-    <div >
-      <h1>{{ productData.name }}</h1>
-      <h3>Price : {{ productData.price }}</h3>
+    </mat-grid-tile>
+    <mat-grid-tile class="content-tile">
       <div>
-        color:
-        <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
+        <h1>{{ productData.name }}</h1>
+        <h3>Price : {{ productData.price }}</h3>
+        <div>
+          color:
+          <h5
+            [style.backgroundColor]="productData.color"
+            class="product-color"
+          ></h5>
+        </div>
+        <h6>Category : {{ productData.category }}</h6>
+        <h6>Discription : {{ productData.discription }}</h6>
+        <h6>Company Name : {{ productData.companyname }}</h6>
+        <h6 style="color: red">Quantity Available: {{ totalQuantity }}</h6>
+        <button mat-raised-button class="form-button">Buy Now</button>
+        <button *ngIf="!removeCart" mat-raised-button (click)="AddToCart()">
+          Add to Cart
+        </button>
+        <button
+          *ngIf="removeCart"
+          mat-raised-button
+          (click)="removeToCart(productData.id)"
+        >
+          Remove to Cart
+        </button>
+        <div class="quantity-group">
+          <button (click)="handleQuantity('min')" mat-raised-button>-</button>
+          <input matInput type="text" name="" value="{{ productQuantity }}" />
+          <button (click)="handleQuantity('plus')" mat-raised-button>+</button>
+        </div>
       </div>
-      <h6>Category : {{productData.category}}</h6>
-      <h6>Discription : {{productData.discription}}</h6>
-      <h6>Company Name : {{productData.companyname}}</h6>
-      <h6 style="color: red;">Quantity Available: {{totalQuantity}}</h6>
-      <button mat-raised-button class="form-button">Buy Now</button>
-      <button *ngIf="!removeCart" mat-raised-button (click)="AddToCart()">Add to Cart</button>
-      <button *ngIf="removeCart" mat-raised-button (click)="removeToCart(productData.id)">Remove to Cart</button>
-      <div class="quantity-group">
-        <button (click)="handleQuantity('min')" mat-raised-button>-</button>
-        <input matInput type="text" name="" value="{{productQuantity}}">
-        <button (click)="handleQuantity('plus')" mat-raised-button>+</button>
-      </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
 <mat-divider></mat-divider>
-<!-- //////////////// display related products /////////////////// -->
-<h1 class="relatedProducts">Related Products</h1>  
-<div class="main">
-    <div class="inner">
-        <mat-card *ngFor="let item of allRelatedProducts">
-            <mat-card-content>
-                <img src="{{item.image}}" alt="">
-            </mat-card-content>
-            <mat-card-footer>
-                <button mat-raised-button routerLink="/details/{{ item.id }}">{{item.companyname}}</button>           
-            </mat-card-footer>
-        </mat-card>
-    </div>
-</div>
 
+<!-- //////////////// display related products /////////////////// -->
+<h1 class="relatedProducts">Related Products</h1>
+<div class="main">
+  <div class="inner">
+    <mat-card *ngFor="let item of allRelatedProducts">
+      <mat-card-content>
+        <img src="{{ item.image }}" alt="" />
+      </mat-card-content>
+      <mat-card-footer>
+        <button
+          mat-raised-button
+          routerLink="/details/{{ item.id }}"
+          (click)="reload()"
+        >
+          {{ item.companyname }}
+        </button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

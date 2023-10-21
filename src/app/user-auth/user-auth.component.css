@@ -1,7 +1,14 @@
-.mat-card{
-    border: 1px solid red;
-    width: auto;
-    height: auto;
-    margin: 5% 35%;
-    border-radius: 10px;
-  }
+.user-auth{
+  margin-top: 65px;
+  border: 1px solid #ddd;
+}
+.mat-card {
+  width: auto;
+  max-height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 black;
+  margin: 5% 38%;
+}
+.mat-button{
+  position: relative;
+}

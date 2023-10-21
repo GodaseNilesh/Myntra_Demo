@@ -114,7 +114,7 @@ export class ProductService {
         observe: 'response',
       })
       .subscribe((result) => {
-        console.log(result);
+        // console.log(result);
         if (result && result.body) {
           this.cartData.emit(result.body);
         }
@@ -129,6 +129,26 @@ export class ProductService {
     let userStore = sessionStorage.getItem('user');
     let userData = userStore && JSON.parse(userStore);
     return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id)
+  }
+
+  selectedOrder(data:cart){
+    return this.http.put(`http://localhost:3000/cart/${data.id}`,data)
+  }
+
+  //add product into user order
+  userOrder(data:any){
+    return this.http.post('http://localhost:3000/userOrder', data);
+  }
+
+  getUserOrder(){
+    return this.http.get('http://localhost:3000/userOrder');
+  }
+  updateUserOrder(data:cart){
+    return this.http.put(`http://localhost:3000/userOrder/${data.id}`,data)
+  }
+
+  removeUserProduct(id:any){
+    return this.http.delete('http://localhost:3000/userOrder/' + id);
   }
 
   orderNow(data:order){
@@ -155,6 +175,6 @@ export class ProductService {
 
   //show sold product order list from orders data (json-server)
   soldProduct(){
-    return this.http.get<product>('http://localhost:3000/orders');
+    return this.http.get<product>('http://localhost:3000/orders?_limit=4');
   }
 }

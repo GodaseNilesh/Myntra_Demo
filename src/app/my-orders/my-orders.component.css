@@ -1,6 +1,8 @@
 .my-orders{
     margin: 50px 0px;
+    margin-top: 50px;
     margin-bottom: 100px;
+    border: 1px solid #ddd;
 }
 .my-orders .order-img{
     width: 100px;

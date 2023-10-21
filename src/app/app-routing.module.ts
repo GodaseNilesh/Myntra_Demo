@@ -14,6 +14,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ShopByCategoryComponent } from './shop-by-category/shop-by-category.component';
+import { UserProfileDetailsComponent } from './user-profile-details/user-profile-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     component:ShopByCategoryComponent,
     path:'shop-by-category/:category'
+  },
+  {
+    component:UserProfileDetailsComponent,
+    path:'user-profile'
   }
 ];
 

@@ -4,35 +4,81 @@
     <div class="col-sm-8 details">
       <ul *ngFor="let cart of cartData">
         <li>
-          <img
-          src="{{cart.image}}"
-            alt=""
-          />
+          <mat-checkbox
+            class="example-margin"
+            [(ngModel)]="cart.selected"
+            (click)="selectedProduct(cart,quantity.value)"
+          ></mat-checkbox>
         </li>
         <li>
-          <span>Name : {{cart.name}}</span>
+          <img src="{{ cart.image }}" alt="" />
         </li>
         <li>
-          <span> Price : {{cart.price}}</span>
+          <span>Name : {{ cart.name }}</span>
         </li>
         <li>
-          <span> Quantity : {{cart.quantity}}</span>
+          <span> Price : {{ cart.price }}</span>
         </li>
         <li>
-          <button class="form-button">Remove to Cart</button>
+          <span>
+            Quantity :
+            <input
+              type="number"
+              name="quantity"
+              #quantity
+              matInput
+              value="{{cart.quantity}}"
+              min="1"
+              style="width: 40px"
+              (change)="selectedProduct(cart,quantity.value)"
+          /></span>
+        </li>
+        <li>
+          <button class="form-button" (click)="removeToCart(cart.id)">
+            Remove to Cart
+          </button>
         </li>
       </ul>
     </div>
-    <div class="col-sm-4 summary">
-      <h3>Summary</h3>
-      <ul>
-        <li><span>Amount </span><span>{{priceSummary.price}}</span></li>
-        <li><span>Tax </span><span>{{priceSummary.tax}}</span></li>
-        <li><span>Delivery charge </span><span>{{priceSummary.delivery}}</span></li>
-        <li><span>Discount </span><span>{{priceSummary.discount}}</span></li>
-        <li><span>Total </span><span> {{priceSummary.total}}</span></li>
-        <button class="form-button max-width" (click)="checkout()">Checkout</button>
-    </ul>
+    <div class="col-sm-3 summary">
+      <div class="product-amount">
+        <h3>Summary</h3>
+        <ul>
+          <li>
+            <span>Amount </span><span>{{ priceSummary.price }}</span>
+          </li>
+          <li>
+            <span>Tax </span><span>{{ priceSummary.tax }}</span>
+          </li>
+          <li>
+            <span>Delivery charge </span
+            ><span>{{ priceSummary.delivery }}</span>
+          </li>
+          <li>
+            <span>Discount </span><span>{{ priceSummary.discount }}</span>
+          </li>
+          <li>
+            <span>Total </span><span> {{ priceSummary.total }}</span>
+          </li>
+          <button class="form-button max-width" (click)="checkout()">
+            Checkout
+          </button>
+        </ul>
+      </div>
+      <div class="product-details" *ngIf="showProduct">
+        <ul>
+          <li>
+            <img src="{{ showProduct.image }}" alt="" />
+          </li>
+          <li>
+            <h5>{{ showProduct.name }}</h5>
+          </li>
+          <li>Price:{{ showProduct.price }}</li>
+          <li>Color:{{ showProduct.color }}</li>
+          <li>Quantity:{{ showProduct.quantity }}</li>
+          <li>Discription:{{ showProduct.discription }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

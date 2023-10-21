@@ -12,8 +12,10 @@ export class HomeComponent {
 totalQuantity : undefined | number;
 popularProducts:undefined | product[];
 trendyProducts: undefined | product[];
-mostSelledProducts:undefined | product[];
+mostSelledProducts: product[]=[];
 carouselImages: any | any[];
+uniqueObjArray:product[]=[];
+
 
     constructor(private product:ProductService, private router:Router){
 
@@ -30,14 +32,17 @@ carouselImages: any | any[];
         this.carouselImages=data;
         // console.log(this.carouselImages)
       });
+
+      this.getAllCategory();
       this.product.soldProduct().subscribe((data:any)=>{
-        this.mostSelledProducts=data;
+        // this.mostSelledProducts=data;
         let id:any;
         if(data){
           for(let items of data){
             id=items.productId;
+            // console.log(id);
             this.product.getProduct(id).subscribe((result)=>{
-            // this.mostSelledProducts=result;
+            this.mostSelledProducts.push(result);
         })
         }
         }
@@ -57,4 +62,16 @@ carouselImages: any | any[];
         console.log("length",this.totalQuantity);
       })
     }
+
+    getAllCategory(){
+      this.product.productListAllCompany().subscribe((result)=>{
+        console.log("all categories",result);
+
+        this.uniqueObjArray=[
+          ...new Map(result.map((item)=>[item["category"],item])).values(),
+        ];
+        console.log("uniqueObjArray", this.uniqueObjArray);
+      })
+    }
+
 }

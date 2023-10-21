@@ -1,0 +1,118 @@
+<div class="user-profile">
+  <div class="user-option">
+    <ul>
+      Profile
+      <li><a (click)="openViewProfile()" [class.clicked]="clicked">View Profile</a></li>
+      <li><a (click)="openProfileUpdate()" [class.clicked]="clicked">Edit Profile</a></li>
+    </ul>
+    <ul>
+      Address
+      <li><a>Saved Address</a></li>
+      <li><a>Add Address</a></li>
+      <li><a>Update Address</a></li>
+    </ul>
+    <ul>
+      My Orders
+      <li><a (click)="openMyOrders()">View Orders</a></li>
+      <li><a (click)="openCartPage()">View Cart</a></li>
+    </ul>
+  </div>
+  <div class="selected-option" [ngSwitch]="userOption">
+    <div *ngSwitchCase="'viewProfile'">
+      <h1>User Profile Details</h1>
+      <mat-card *ngIf="userData">
+        <span>
+          <label class="label1">Full Name: </label>
+          <label class="label2">{{ userData.name }} </label>
+        </span>
+        <span>
+          <label class="label1"> User Email: </label>
+          <label class="label2">{{ userData.email }} </label>
+        </span>
+        <span>
+          <label class="label1"> DOB: </label>
+          <label class="label2">{{userData.DOB}} </label>
+        </span>
+        <span>
+          <label class="label1"> Contact: </label>
+          <label class="label2">{{userData.contact}}</label>
+        </span>
+        <span>
+          <label class="label1"> Gender: </label>
+          <label class="label2">{{userData.gender}}</label>
+        </span>
+        <span>
+          <label class="label1"> Address: </label>
+          <label class="label2">{{userData.address}}</label>
+        </span>
+        <button mat-raised-button (click)="openProfileUpdate()">
+          Update Profile Details
+        </button>
+      </mat-card>
+    </div>
+    <div *ngSwitchCase="'updateProfile'" class="updateProfile">
+      <h1>Profile Update</h1>
+      <mat-card *ngIf="userData">
+        <form #updateProfile="ngForm" (ngSubmit)="updateProfileDetails(updateProfile.value)">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Full Name</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Full Name"
+              name="name"
+              ngModel="{{ userData?.name }}"
+            /> </mat-form-field
+          ><br>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Email Address</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Email"
+              name="email"
+              ngModel="{{ userData?.email }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User DOB </mat-label>
+            <input
+              matInput
+              type="date"
+              placeholder="Enter User DOB"
+              name="DOB"
+              ngModel="{{ userData?.DOB }}"
+            /> </mat-form-field
+          ><br>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Contact</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Contact"
+              name="contact"
+              ngModel="{{ userData?.contact }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Address </mat-label>
+            <input
+              matInput
+              placeholder="Enter User Address"
+              name="address"
+              ngModel="{{ userData?.address }}"
+            /> </mat-form-field
+          ><br>
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Gender </mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Enter User Gender"
+              name="gender"
+              ngModel="{{ userData?.gender }}"
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button >Update Profile Details</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

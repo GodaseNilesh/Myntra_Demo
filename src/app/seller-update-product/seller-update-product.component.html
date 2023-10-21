@@ -1,68 +1,93 @@
 <div class="update-product">
-  <h1>Update Product</h1>
   <p class="message-p">{{ productMessage }}</p>
-  <form
-    #addProduct="ngForm"
-    (ngSubmit)="submit(addProduct.value)"
-    class="common-form"
-  >
-    <input
-      class="form-input"
-      type="text"
-      name="companyname"
-      ngModel="{{ productData?.companyname }}"
-      placeholder="Enter Product Company Name"
-    />
-    <input
-      class="form-input"
-      type="text"
-      name="name"
-      ngModel="{{ productData?.name }}"
-      placeholder="Enter Product Name"
-    />
-    <input
-      class="form-input"
-      type="text"
-      name="price"
-      ngModel="{{ productData?.price }}"
-      placeholder="Enter Product Price"
-    />
-    <input
-      class="form-input"
-      type="text"
-      name="color"
-      ngModel="{{ productData?.color }}"
-      placeholder="Enter Product Color"
-    />
-    <input
-      class="form-input"
-      type="text"
-      name="category"
-      ngModel="{{ productData?.category }}"
-      placeholder="Enter Product category"
-    />
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card-header">
+        <h1>Update Product</h1>
+      </mat-card-header>
+      <mat-card-content class="mat-card-content">
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Company Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product Company Name"
+            name="companyname"
+            ngModel="{{ productData?.companyname }}"
+          /> </mat-form-field
+        ><br />
 
-    <textarea
-      class="form-input"
-      type="text"
-      name="discription"
-      ngModel="{{ productData?.discription }}"
-      placeholder="Enter Product Discription"
-    ></textarea>
-    <input
-      class="form-input"
-      type="text"
-      name="image"
-      ngModel="{{ productData?.image }}"
-      placeholder="Enter Product Image URL"
-    />
-    <input
-      class="form-input"
-      type="number"
-      name="quantity"
-      ngModel="{{ productData?.quantity }}"
-      placeholder="Enter Product Quantity"
-    />
-    <button class="form-button">Update Product</button>
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product  Name"
+            name="name"
+            ngModel="{{ productData?.name }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Price</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product  Price"
+            name="price"
+            ngModel="{{ productData?.price }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Color</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product  Color"
+            name="color"
+            ngModel="{{ productData?.color }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Category</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product Category"
+            name="category"
+            ngModel="{{ productData?.category }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Discription</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product Discription"
+            name="discription"
+            ngModel="{{ productData?.discription }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Image URL</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product URL"
+            name="image"
+            ngModel="{{ productData?.image }}"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="fill" class="mat-form-field">
+          <mat-label>Enter Product Quantity</mat-label>
+          <input
+            matInput
+            placeholder="Enter Product Quantity"
+            name="quantity"
+            ngModel="{{ productData?.quantity }}"
+          /> </mat-form-field
+        ><br />
+
+        <button mat-raised-button class="mat-button">Update Product</button>
+      </mat-card-content>
+    </mat-card>
   </form>
 </div>

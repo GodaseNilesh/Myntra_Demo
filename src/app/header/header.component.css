@@ -3,14 +3,21 @@
   justify-content: space-between;
   width: 100%;
   background-color: rgb(232, 136, 41);
+  /* background-color: transparent; */
   color: black;
   height: 65px;
   align-items: center;
   font-weight: 500;
+  box-shadow: 0 2px 5px 0 black;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
 }
 .navbar h1 a {
   color: black;
   margin: 0;
+  height: auto;
   font-size: 40px;
   text-decoration: none;
 }
@@ -19,10 +26,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: auto;
 }
 .navbar ul li {
   padding: 10px;
   padding-bottom: 20px;
+  height: auto;
 }
 
 .navbar li a {
@@ -30,12 +39,14 @@
   color: black;
   cursor: pointer;
   font-size: 20px;
+  height: auto;
 }
 .navbar .nav-search {
   flex: 1;
   display: flex;
   margin: 0 50px;
   padding-bottom: 15px;
+  height: auto;
 }
 .navbar .nav-search input {
   flex: 1;

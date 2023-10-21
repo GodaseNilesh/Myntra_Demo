@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { product } from '../data-types';
 import { ProductService } from '../services/product.service';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-product-list',
@@ -9,21 +10,28 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductListComponent {
   productList: undefined | product[];
-  public displayColumns : string[] = ['image','name','price','color','quantity','companyname','action']// category is removed
   public dataSource : product[] = []
   productMessage: undefined | string;
   productCategory:string='';
-  actions:string='seller';
+  actions:boolean=false;
+  uniqueObjArray:product[]=[];
 
   constructor(private product:ProductService){
   }
 
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  // ngAfterViewInit() {
+  //   this.dataSource.paginator = this.paginator;
+  // }
+
+
   ngOnInit(): void {
-    this.actions='seller';
     if(sessionStorage.getItem('user')){
+      console.log("user logged in");
     let sellerStore=sessionStorage.getItem('user');
     if(sellerStore && sellerStore.length){
-      this.actions='user';
+      this.actions=true;
       this.productCategory=this.product.productCategory;
       this.product.productListByCategory(this.productCategory) //productlistbycategory=ProductListByCompanyName
       .subscribe((result) => {
@@ -32,24 +40,20 @@ export class ProductListComponent {
         this.dataSource=result;
       });
     }
-  // }else if(sessionStorage.getItem('seller')){
-  //   this.actions='seller';
-  //   this.productCategory=this.product.productCategory;
-  //   console.log(this.productCategory);
-  //     this.product.productListByCompanyName(this.productCategory) //productlistbycategory=ProductListByCompanyName
-  //     .subscribe((result) => {
-  //       console.warn(result);
-  //       this.productList = result;
-  //       this.dataSource=result;
-  //     });
   }else{
+    console.log("seller logged in");
+    this.actions=false;
     this.productCategory=this.product.productCategory;
       this.product.productListAllCompany()
       .subscribe((result) => {
         console.warn(result);
         this.productList = result;
         this.dataSource=result;
-        // console.log(this.dataSource);
+
+        this.uniqueObjArray=[
+          ...new Map(result.map((item)=>[item["category"],item])).values(),
+        ];
+        console.log(this.uniqueObjArray);
       });
   }   
   }

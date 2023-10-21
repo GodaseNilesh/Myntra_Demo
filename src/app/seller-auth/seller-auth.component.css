@@ -1,6 +1,10 @@
-.mat-card{
+.seller-auth{
+  margin-top: 65px;
   border: 1px solid red;
+}
+.mat-card{
   width: auto;
   height: auto;
-  margin: 5% 35%;
+  margin: 5% 38%;
+  box-shadow: 0 2px 5px 0 black;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { cart, product } from '../data-types';
 
@@ -19,10 +19,15 @@ export class ProductDetailsComponent {
 
   constructor(
     private activeRoute: ActivatedRoute,
+    private router:Router,
     private product: ProductService
   ) {}
 
   ngOnInit(): void {
+    this.reload();
+  }
+  
+  reload(){
     //get product id from url and fetch product data from json
     let productId = this.activeRoute.snapshot.paramMap.get('productId');
     console.log(productId);
@@ -70,7 +75,6 @@ export class ProductDetailsComponent {
         }
       });
   }
-  
 
   handleQuantity(val: string) {
     if(this.totalQuantity){
@@ -97,6 +101,7 @@ export class ProductDetailsComponent {
           ...this.productData,
           userId,
           productId: this.productData.id,
+          selected: false
         };
         
         delete cartData.id;
@@ -127,5 +132,4 @@ export class ProductDetailsComponent {
       this.removeCart = false;
     }
   }
-
 }

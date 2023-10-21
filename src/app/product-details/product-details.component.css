@@ -1,10 +1,10 @@
 .product-details {
   margin: auto;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 20px;
   padding: 0;
   width: 100%;
-  /* border: 1px solid red; */
+  height: auto;
 }
 mat-grid-list {
   margin: auto;
@@ -13,14 +13,15 @@ mat-grid-list {
   width: 90%;
   display: flex;
   justify-content: space-between;
+  height: 100%;
   /* border: 1px solid black; */
 }
-mat-grid-tile{
+mat-grid-tile {
   border-radius: 10px;
 }
 .product-image {
-  width: 100%;
-  height: 400px;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
 }
 .product-color {
@@ -45,10 +46,14 @@ h6 {
   width: 50px;
   padding: 10px;
 }
-.image-tile{
+.image-tile {
   /* border: 1px solid green; */
   border-radius: 10px;
-  /* margin: 10px; */
+  height: 100%;
+}
+.content-tile {
+  /* border: 1px solid red; */
+  height: 100%;
 }
 /* /////////////////////////////////// other products ///////////////////////////// */
 .relatedProducts {
@@ -56,15 +61,16 @@ h6 {
   margin-bottom: 10px;
   /* border: 1px solid red; */
   padding: 0;
+  height: auto;
 }
-.main{
+.main {
   width: 100%;
   height: auto;
   margin: 20px 0px;
   padding: 10px;
   /* border: 1px solid red; */
 }
-.inner{
+.inner {
   width: 100%;
   height: 85%;
   /* border: 1px solid green; */
@@ -73,7 +79,7 @@ h6 {
   margin-top: -10px;
   border-radius: 10px;
 }
-mat-card{
+mat-card {
   margin: 5px;
   padding: 0;
   border: 1px solid #ddd;
@@ -81,7 +87,7 @@ mat-card{
   width: 19%;
   border-radius: 10px;
 }
-mat-card-content{
+mat-card-content {
   height: 280px;
   width: auto;
   /* border: 1px solid blue; */
@@ -89,15 +95,15 @@ mat-card-content{
   padding: 0;
   margin-top: 0px;
 }
-mat-card-content img{
-  /* border: 1px solid red; */
-  padding: aut0;
-  height: 250px;
-  width: 300px;
+mat-card-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  max-width: 100%;
   object-fit: contain;
-  margin-top: -16px;
 }
-mat-card button{
+mat-card button {
   text-align: center;
   border-top: 1px solid black;
   margin-bottom: 0px;
@@ -106,7 +112,7 @@ mat-card button{
   font-weight: 500;
   font-size: 22px;
 }
-mat-card-footer{
+mat-card-footer {
   margin: 0;
   /* border: 1px solid red; */
 }
