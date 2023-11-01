@@ -1,75 +1,47 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-import { SellerHomeComponent } from './seller-home/seller-home.component';
-import { authGuard } from './auth.guard';
-import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
-import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
-import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { UserAuthComponent } from './user-auth/user-auth.component';
-import CartPageComponent from './cart-page/cart-page.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SearchComponent } from './search/search.component';
 import { ShopByCategoryComponent } from './shop-by-category/shop-by-category.component';
-import { UserProfileDetailsComponent } from './user-profile-details/user-profile-details.component';
+
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'seller-auth', component: SellerAuthComponent },
   {
-    path: 'seller-home',
-    component: SellerHomeComponent,
-    canActivate: [authGuard],
+    path: '',
+    component: HomeComponent,
   },
   {
-    path: 'seller-add-product',
-    component: SellerAddProductComponent,
-    canActivate: [authGuard],
+    path: 'details/:productId',
+    component: ProductDetailsComponent,
   },
   {
-    path: 'seller-update-product/:id',
-    component: SellerUpdateProductComponent,
-    canActivate: [authGuard],
+    component: ProductListComponent,
+    path: 'product-list',
   },
   {
     path: 'search/:query',
     component: SearchComponent,
   },
   {
-    path:'details/:productId',
-    component:ProductDetailsComponent
+    component: ShopByCategoryComponent,
+    path: 'shop-by-category/:category',
   },
   {
-    component:UserAuthComponent,
-    path:'user-auth'
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
   },
   {
-    component:CartPageComponent,
-     path:'cart-page'
+    path: 'seller',
+    loadChildren: () =>
+      import('./seller/seller.module').then((m) => m.SellerModule),
   },
   {
-    component:CheckoutComponent,
-    path:'checkout'
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
-  {
-    component:MyOrdersComponent,
-    path:'my-orders'
-  },
-  {
-    component:ProductListComponent,
-    path:'product-list'
-  },
-  {
-    component:ShopByCategoryComponent,
-    path:'shop-by-category/:category'
-  },
-  {
-    component:UserProfileDetailsComponent,
-    path:'user-profile'
-  }
 ];
 
 @NgModule({

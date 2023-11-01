@@ -1,12 +1,67 @@
 <div class="home-page">
-  <div class="main"></div>
+  <div class="main">
+    <div class="offer-section">
+      <div class="discount-section">
+        <h4>Keep Shoping for :</h4>
+        <div
+          class="first-section"
+          *ngIf="trendyProducts && trendyProducts.length > 0"
+        >
+          <div *ngFor="let product of trendyProducts.slice(0, 4)">
+            <img
+              src="{{ product.image }}"
+              alt=""
+              routerLink="details/{{ product.id }}"
+            />
+            <!-- <button mat-raised-button>{{product.name}}</button> -->
+            <p>
+              <a routerLink="details/{{ product.id }}">{{ product.name }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="discount-section">
+        <h4>Starting From &#8377;1000 :</h4>
+        <div class="first-section">
+          <div *ngFor="let product of getFilteredProducts.slice(0, 4)">
+            <img src="{{ product.image }}" alt="" 
+            routerLink="details/{{ product.id }}"
+            />
+            <p><a routerLink="details/{{ product.id }}">{{ product.name }}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="discount-section">
+        <h4>Upto 60% off :</h4>
+        <div class="first-section">
+          <div *ngFor="let item of uniqueObjArray.slice(0, 4)">
+            <img
+              src="{{item.image}}"
+              alt=""
+              routerLink="shop-by-category/{{ item.category }}"
+            />
+            <p>{{item.discount/item.price*100}}% OFF</p>
+          </div>
+        </div>
+      </div>
+      <div class="discount-section">
+        <h4>Keep Connecting us :</h4>
+        <div class="signup-section">
+          <h2>Sign in For your best experience</h2>
+          <button routerLink="user/user-auth">Sign in Securely</button>
+          <h2>Growing your business together</h2>
+          <button routerLink="seller/seller-auth">Become a seller</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- <hr /> -->
   <!-- ///////////////// carousel for popular products ///////////// -->
   <ngb-carousel *ngIf="popularProducts">
     <ng-template *ngFor="let item of popularProducts" ngbSlide>
       <div class="picsum-img-wrapper">
-        <a routerLink="/details/{{ item.id }}">
+        <a routerLink="details/{{ item.id }}">
           <img
             class="product-header-img"
             src="{{ item.image }}"
@@ -50,7 +105,7 @@
         <mat-card-footer>
           <h5>{{ item1.name }}</h5>
           <p>Price : {{ item1.price }}</p>
-          <button mat-raised-button routerLink="/details/{{ item1.id }}">
+          <button mat-raised-button routerLink="details/{{ item1.id }}">
             View Details
           </button>
         </mat-card-footer>
@@ -75,13 +130,13 @@
       <div class="product-content" *ngFor="let item of uniqueObjArray">
         <div class="product-image">
           <img
-            routerLink="/shop-by-category/{{ item.category }}"
+            routerLink="shop-by-category/{{ item.category }}"
             src="{{ item.image }}"
             alt="Product image"
           />
         </div>
         <div class="product-links">
-          <a routerLink="/shop-by-category/{{ item.category }}">{{
+          <a routerLink="shop-by-category/{{ item.category }}">{{
             item.category
           }}</a>
         </div>

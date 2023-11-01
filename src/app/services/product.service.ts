@@ -40,7 +40,6 @@ export class ProductService {
   //product list of all company
   productListAllCompany(){
     return this.http.get<product[]>(`http://localhost:3000/products`);
-
   }
 
   deleteProduct(id: number) {
@@ -114,7 +113,6 @@ export class ProductService {
         observe: 'response',
       })
       .subscribe((result) => {
-        // console.log(result);
         if (result && result.body) {
           this.cartData.emit(result.body);
         }

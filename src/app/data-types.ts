@@ -4,17 +4,21 @@ export interface SignUp{
     name:string,
     email:string,
     password:string,
+    id:string
 }
 export interface login{
     companyname:string,
     email:string,
-    password:string
+    password:string,
+    id:string
+
 }
 export interface product{
     // forEach(arg0: (product: product) => void): unknown
     companyname:string,
     name:string,
     price:number,
+    discount:number,
     category:string,
     color:string,
     discription:string,
@@ -61,12 +65,21 @@ export interface carousel{
 }
 
 export interface profile{
-    id: any
+    id:number | undefined,
+    userid: number | undefined,
     name:string,
     email:string,
     password:string,
     DOB:Date,
-    contact:string,
-    address:string,
     gender:string
+    contact:string,
+    city:string,
+    locality:string,
+    address1:string,
+    address2:string,
+    address3:string
+}
+export interface address{
+    city:string,
+    address:string
 }

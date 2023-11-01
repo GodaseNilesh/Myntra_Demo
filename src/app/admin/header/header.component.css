@@ -1,0 +1,110 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  /* background-color: transparent; */
+  color: black;
+  height: 65px;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 0 2px 5px 0 black;
+  position: fixed;
+  top: 0;
+  /* overflow: hidden; */
+  z-index: 100;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "PT Serif", serif;
+}
+.navbar h1 a {
+  color: black;
+  margin: 0;
+  height: auto;
+  font-size: 40px;
+  text-decoration: none;
+}
+.navbar ul {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  /* border: 1px solid red; */
+}
+.navbar ul li {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding-bottom: 20px;
+  height: auto;
+  /* border: 1px solid red; */
+}
+.navbar ul li mat-icon {
+  font-size: 28px;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  height: auto;
+}
+.navbar .nav-search {
+  flex: 1;
+  display: flex;
+  margin: 0 50px;
+  padding-bottom: 15px;
+  height: auto;
+}
+.navbar .nav-search input {
+  flex: 1;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  height: 35px;
+  border-right: 0px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.navbar .nav-search button {
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  height: 35px;
+  border-left: 0px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.suggested-result {
+  position: absolute;
+  display: list-item !important;
+  z-index: 10;
+  background-color: #fff;
+  width: 300px;
+  top: 50px;
+  border: 1px solid #ddd;
+}
+.suggested-result li {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.suggested-result li a {
+  cursor: pointer;
+  color: blueviolet;
+}
+.userName{
+  /* border: 1px solid red; */
+  margin-top: 0;
+}
+.userName h6{
+  margin-top: -5px ;
+  margin-bottom: -7px;
+  font-size: 12px;
+  padding: 0px;
+}
+.userName a{
+  margin-top: -5px;
+  padding: 0;
+}

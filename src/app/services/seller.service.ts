@@ -19,13 +19,13 @@ export class SellerService {
       .subscribe((result) => {
         this.isSellerLoggedIn.next(true);
         sessionStorage.setItem('seller', JSON.stringify(result.body));
-        this.router.navigate(['seller-home']);
+        this.router.navigate(['seller/seller-home']);
       });
   }
   reloadSeller() {
     if (sessionStorage.getItem('seller')) {
       this.isSellerLoggedIn.next(true);
-      this.router.navigate(['seller-home']);
+      this.router.navigate(['seller/seller-home']);
     }
   }
   userLogin(data: login) {
@@ -40,7 +40,7 @@ export class SellerService {
         if (result && result.body && result.body.length) {
           console.warn('user loged in');
           sessionStorage.setItem('seller', JSON.stringify(result.body[0]));
-          this.router.navigate(['seller-home']);
+          this.router.navigate(['seller/seller-home']);
         } else {
           console.warn('login failed');
           this.isLoginError.emit(true);

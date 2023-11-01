@@ -1,19 +1,51 @@
 <div class="main">
-  <div class="inner" *ngIf="actions">
-    <h3>Company Name : {{ dataSource[0].companyname }}</h3>
-    <div class="product-images">
-      <mat-card class="mat-card" *ngFor="let item of dataSource">
-        <img src="{{ item.image }}" alt="" />
+  <div class="user-option">
+    <div class="search-option">
+      <h1>Search By Company Name</h1><br>
+
+
+    <mat-form-field>
+      <mat-label>Choose Company Name</mat-label>
+      <mat-select
+        [(ngModel)]="selectedCompany"
+        (selectionChange)="selectCompany($event)"
+      >
+        <mat-option *ngFor="let item of UniqueCompany" [value]="item">
+          {{ item }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <!-- <mat-form-field>
+      <mat-label>Choose Product Color</mat-label>
+      <mat-select
+        [(ngModel)]="selectedCompany"
+        (selectionChange)="selectCompany($event)"
+      >
+        <mat-option *ngFor="let item of UniqueCompany" [value]="item">
+          {{ item }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+
+    </div>
+    <div class="inner search-result" *ngIf="actions">
+      <h3>Company Name : {{ dataSource[0].companyname }}</h3>
+      <div class="product-images">
+        <mat-card class="mat-card" *ngFor="let item of dataSource">
+          <img src="{{ item.image }}" alt="" />
+          <mat-divider></mat-divider>
+          <h5>{{ item.name }}</h5>
+          <h6>Company Name:{{ item.companyname }}</h6>
+          <h6>Price:{{ item.price }}</h6>
+          <h6>Color:{{ item.color }}</h6>
+          <button mat-raised-button routerLink="/details/{{ item.id }}">
+            View Details
+          </button>
+        </mat-card>
         <mat-divider></mat-divider>
-        <h5>{{ item.name }}</h5>
-        <h6>Company Name:{{ item.companyname }}</h6>
-        <h6>Price:{{ item.price }}</h6>
-        <h6>Color:{{ item.color }}</h6>
-        <button mat-raised-button routerLink="/details/{{ item.id }}">
-          View Details
-        </button>
-      </mat-card>
-      <mat-divider></mat-divider>
+      </div>
     </div>
   </div>
   <div class="inner" *ngIf="!actions">

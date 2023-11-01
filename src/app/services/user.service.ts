@@ -5,48 +5,68 @@ import { Router } from '@angular/router';
 import { faL } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-invalidUserAuth=new EventEmitter<boolean>(false)
-  constructor(private http:HttpClient,private router:Router) { }
+  invalidUserAuth = new EventEmitter<boolean>(false);
+  constructor(private http: HttpClient, private router: Router) {}
 
-  getAllUserData(){
+  getAllUserData() {
     return this.http.get<SignUp[]>('http://localhost:3000/users');
   }
 
   //update user data
-  updateUserProfile(data:profile){
-    return this.http.put(`http://localhost:3000/users/${data.id}`,data)
+  updateUserProfile(data: profile) {
+    return this.http.put(`http://localhost:3000/profile/${data.id}`, data);
   }
 
-  userSignUp(user:profile){
-    this.http.post('http://localhost:3000/users',user,{observe:'response'})
-    .subscribe((result)=>{
-      // console.warn(result);
-      if(result){
-        sessionStorage.setItem('user',JSON.stringify(result.body))
-        this.router.navigate(['/'])
-      }
-    })
+  createUserProfile(data: profile) {
+    return this.http.post(`http://localhost:3000/profile`,data)
   }
 
-  userLogin(data:login){
-    this.http.get<SignUp[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,
-    {observe:'response'}).subscribe((result)=>{
-      if(result && result.body?.length){
-        sessionStorage.setItem('user',JSON.stringify(result.body[0]))
-        this.invalidUserAuth.emit(false);
-      this.router.navigate(['/']);
-      }else{
-        this.invalidUserAuth.emit(true)
-      }
-    })
+
+  getLoggedUserProfile(userid:number){
+    return this.http.get(`http://localhost:3000/profile?userid=${userid}`)
   }
 
-  userAuthReload(){
-    if(sessionStorage.getItem('user')){
-      this.router.navigate(['/'])
+  getUserProfile(){
+    return this.http.get(`http://localhost:3000/profile`);
+  }
+
+  userSignUp(user: SignUp) {
+    return this.http.post('http://localhost:3000/users', user, {
+      observe: 'response',
+    });
+    // .subscribe((result)=>{
+    //   if(result){
+    //     sessionStorage.setItem('user',JSON.stringify(result.body))
+    //     this.router.navigate(['/'])
+    //   }
+    // })
+  }
+
+  userLogin(data: login) {
+    this.http
+      .get<SignUp[]>(
+        `http://localhost:3000/users?email=${data.email}&password=${data.password}`,
+        { observe: 'response' }
+      )
+      .subscribe((result) => {
+        if (result && result.body?.length) {
+          sessionStorage.setItem('user', JSON.stringify(result.body[0]));
+          this.invalidUserAuth.emit(false);
+          this.router.navigate(['/']);
+        } else {
+          this.invalidUserAuth.emit(true);
+        }
+      });
+    let userData = sessionStorage.getItem('user');
+    console.log(userData);
+  }
+
+  userAuthReload() {
+    if (sessionStorage.getItem('user')) {
+      this.router.navigate(['admin/']);
     }
   }
 }

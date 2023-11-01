@@ -1,0 +1,11 @@
+.seller-auth{
+  margin-top: 65px;
+  border: 1px solid red;
+  font-family: "PT Serif", serif;
+}
+.mat-card{
+  width: auto;
+  height: auto;
+  margin: 5% 38%;
+  box-shadow: 0 2px 5px 0 black;
+}

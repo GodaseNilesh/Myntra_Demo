@@ -15,6 +15,8 @@ trendyProducts: undefined | product[];
 mostSelledProducts: product[]=[];
 carouselImages: any | any[];
 uniqueObjArray:product[]=[];
+getAllProducts:product[]=[];
+getFilteredProducts:product[]=[];
 
 
     constructor(private product:ProductService, private router:Router){
@@ -52,7 +54,7 @@ uniqueObjArray:product[]=[];
     showProductList(value:string){
       console.log(value);
       this.product.productListByCategory(value);
-      this.router.navigate(['shop-by-category']);
+      this.router.navigate(['admin/shop-by-category']);
     }
 
     SearchByCategory(data:string){
@@ -65,7 +67,12 @@ uniqueObjArray:product[]=[];
 
     getAllCategory(){
       this.product.productListAllCompany().subscribe((result)=>{
-        console.log("all categories",result);
+        this.getAllProducts=result;
+
+        this.getFilteredProducts=this.getAllProducts.filter((item)=>{
+          return item.price>10000;
+        })
+        console.log(this.getFilteredProducts);
 
         this.uniqueObjArray=[
           ...new Map(result.map((item)=>[item["category"],item])).values(),

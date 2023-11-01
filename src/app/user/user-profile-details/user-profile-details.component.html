@@ -1,0 +1,345 @@
+<div class="user-profile">
+  <div class="user-option">
+    <ul>
+      Profile
+      <li>
+        <a (click)="userOption = 'viewProfile'">View Profile</a>
+      </li>
+      <li>
+        <a (click)="userOption = 'updateProfile'">Edit Profile</a>
+      </li>
+    </ul>
+    <ul>
+      Address
+      <li><a (click)="userOption = 'ViewAddress'">Saved Address</a></li>
+      <li><a>Add Address</a></li>
+      <li><a (click)="userOption = 'updateAddress'">Update Address</a></li>
+    </ul>
+    <ul>
+      My Orders
+      <li><a (click)="openMyOrders()">View Orders</a></li>
+      <li><a (click)="openCartPage()">View Cart</a></li>
+    </ul>
+  </div>
+  <div class="selected-option" [ngSwitch]="userOption">
+    <div *ngSwitchCase="'viewProfile'">
+      <h1>User Profile Details</h1>
+      <mat-card *ngIf="userData">
+        <span>
+          <label class="label1">Full Name: </label>
+          <label class="label2">{{ userData.name }} </label>
+        </span>
+        <span>
+          <label class="label1"> User Email: </label>
+          <label class="label2">{{ userData.email }} </label>
+        </span>
+        <span>
+          <label class="label1"> DOB: </label>
+          <label class="label2">{{ userData.DOB }} </label>
+        </span>
+        <span>
+          <label class="label1"> Contact: </label>
+          <label class="label2">{{ userData.contact }}</label>
+        </span>
+        <span>
+          <label class="label1"> Gender: </label>
+          <label class="label2">{{ userData.gender }}</label>
+        </span>
+        <span>
+          <label class="label1"> Address1: </label>
+          <label class="label2">{{ userData.address1 }}</label>
+        </span>
+        <span>
+          <label class="label1"> Address2: </label>
+          <label class="label2">{{ userData.address2 }}</label>
+        </span>
+        <span>
+          <label class="label1"> Address3: </label>
+          <label class="label2">{{ userData.address3 }}</label>
+        </span>
+        <button mat-raised-button (click)="userOption = 'updateProfile'">
+          Update Profile Details
+        </button>
+      </mat-card>
+      <button
+        mat-raised-button
+        *ngIf="!userData"
+        (click)="userOption = 'createProfile'"
+      >
+        First Create Your Profile
+      </button>
+    </div>
+    <div *ngSwitchCase="'createProfile'" class="updateProfile">
+      <h1>Create Profile</h1>
+      <mat-card>
+        <form
+          #profileDetails="ngForm"
+          (ngSubmit)="createProfile(profileDetails.value)"
+        >
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Full Name</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Full Name"
+              name="name"
+              ngModel="{{ userData?.name }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Email Address</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Email"
+              name="email"
+              ngModel="{{ userData?.email }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your DOB </mat-label>
+            <input
+              matInput
+              type="date"
+              placeholder="Enter User DOB"
+              name="DOB"
+              ngModel="{{ userData?.DOB }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Contact</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Contact"
+              name="contact"
+              ngModel="{{ userData?.contact }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your City</mat-label>
+            <input
+              matInput
+              placeholder="Enter Your City"
+              name="city"
+              ngModel="{{ userData?.city }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User locality</mat-label>
+            <input
+              matInput
+              placeholder="Enter User locality"
+              name="locality"
+              ngModel="{{ userData?.locality }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address1 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address1"
+              name="address1"
+              ngModel="{{ userData?.address1 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address2 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address2"
+              name="address2"
+              ngModel="{{ userData?.address2 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address3 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address3"
+              name="address3"
+              ngModel="{{ userData?.address3 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Gender </mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Enter User Gender"
+              name="gender"
+              ngModel="{{ userData?.gender }}"
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button>create Profile Details</button>
+        </form>
+      </mat-card>
+    </div>
+    <div *ngSwitchCase="'updateProfile'" class="updateProfile">
+      <h1>Profile Update</h1>
+      <mat-card>
+        <form
+          #updateProfile="ngForm"
+          (ngSubmit)="updateProfileDetails(updateProfile.value)"
+        >
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Full Name</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Full Name"
+              name="name"
+              ngModel="{{ userData?.name }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Email Address</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Email"
+              name="email"
+              ngModel="{{ userData?.email }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your DOB </mat-label>
+            <input
+              matInput
+              type="date"
+              placeholder="Enter User DOB"
+              name="DOB"
+              ngModel="{{ userData?.DOB }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your Contact</mat-label>
+            <input
+              matInput
+              placeholder="Enter User Contact"
+              name="contact"
+              ngModel="{{ userData?.contact }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter Your City</mat-label>
+            <input
+              matInput
+              placeholder="Enter Your City"
+              name="city"
+              ngModel="{{ userData?.city }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User locality</mat-label>
+            <input
+              matInput
+              placeholder="Enter User locality"
+              name="locality"
+              ngModel="{{ userData?.locality }}"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address1 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address1"
+              name="address1"
+              ngModel="{{ userData?.address1 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address2 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address2"
+              name="address2"
+              ngModel="{{ userData?.address2 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address3 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address3"
+              name="address3"
+              ngModel="{{ userData?.address3 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User Gender </mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Enter User Gender"
+              name="gender"
+              ngModel="{{ userData?.gender }}"
+            /> </mat-form-field
+          ><br />
+          <button mat-raised-button>Update Profile Details</button>
+        </form>
+      </mat-card>
+    </div>
+    <div *ngSwitchCase="'ViewAddress'" class="updateProfile">
+      <h1>Saved Address</h1>
+      <mat-card style="border: none;" class="mat-viewAddress">
+        <div class="ViewAddress">
+          <textarea ngModel="{{userData.address1}}" disabled> </textarea>
+        </div>
+        <div class="ViewAddress">
+          <textarea ngModel="{{userData.address2}}" disabled> </textarea>
+        </div>
+        <div class="ViewAddress">
+          <textarea ngModel="{{userData.address3}}" disabled> </textarea>
+        </div>
+        <button mat-raised-button (click)="userOption = 'updateAddress'">
+          Update Address
+        </button>
+      </mat-card>
+    </div>
+    <div *ngSwitchCase="'updateAddress'" class="updateProfile">
+      <h1>Profile Update</h1>
+      <mat-card>
+        <form
+          #updateAddress="ngForm"
+          (ngSubmit)="changeAddress(updateAddress.value, userData)"
+        >
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address1 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address1"
+              name="address1"
+              ngModel="{{ userData?.address1 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address2 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address2"
+              name="address2"
+              ngModel="{{ userData?.address2 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Enter User address3 </mat-label>
+            <textarea
+              matInput
+              placeholder="Enter User address3"
+              name="address3"
+              ngModel="{{ userData?.address3 }}"
+              textarea
+            ></textarea></mat-form-field
+          ><br />
+          <button mat-raised-button (click)="userOption = 'updateAddress'">
+            Update Address
+          </button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

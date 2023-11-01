@@ -1,8 +1,9 @@
 .search-item{
-    margin: 25px auto;
+    margin: 90px auto;
     width: 800px;
     border-top: 1px solid #ddd;
     padding: 10px;
+    font-family: "PT Serif", serif;
 }
 .search-item img{
     width: 100%;

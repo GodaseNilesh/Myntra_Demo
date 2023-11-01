@@ -12,10 +12,11 @@ export class ProductDetailsComponent {
   productData: undefined | product;
   productQuantity: number = 1;
   totalQuantity: undefined | number;
-  productCategory:string | undefined;
+  productCategory:any ;
   removeCart = false;
   cartData :product | undefined;
   allRelatedProducts : product[]=[];
+  id:any;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -24,33 +25,34 @@ export class ProductDetailsComponent {
   ) {}
 
   ngOnInit(): void {
-    this.reload();
-  }
-  
-  reload(){
     //get product id from url and fetch product data from json
-    let productId = this.activeRoute.snapshot.paramMap.get('productId');
-    console.log(productId);
 
-    productId && this.product.getProduct(productId).subscribe((result) => {
+    this.activeRoute.paramMap.subscribe((result)=>{
+      this.id=result.get('productId');
+
+      this.id && this.product.getProduct(this.id).subscribe((result) => {
         this.productData = result;
+        console.log(this.productData);
+    })
 
         //fetching all other products of same category
-        this.productCategory=this.productData.category;
-        this.product.searchByCategory(this.productCategory).subscribe((result)=>{
-          this.allRelatedProducts=result;
-            // console.log(result);
-        })
+        setTimeout(() => {
+          if(this.productData){
+            this.productCategory=this.productData.category;
+            this.product.searchByCategory(this.productCategory).subscribe((result)=>{
+              this.allRelatedProducts=result;
+            })
+          }
+        }, 100);
 
-
-        this.totalQuantity=this.productData.quantity;
+        this.totalQuantity=this.productData?.quantity;
         // console.log(this.totalQuantity);
 
         let cartData = sessionStorage.getItem('localCart');
-        if (productId && cartData) {
+        if (this.id && cartData) {
           let items = JSON.parse(cartData);
           items = items.filter(
-            (item: product) => productId == item.id.toString()
+            (item: product) => this.id == item.id.toString()
           );
           if (items.length) {
             this.removeCart = true;
@@ -65,7 +67,7 @@ export class ProductDetailsComponent {
           this.product.cartData.subscribe((result) => {
             let item = result.filter(
               (item: product) =>
-                productId?.toString() === item.productId?.toString()
+                this.id.toString() === item.productId?.toString()
             );
             if (item.length) {
               this.cartData=item[0];
@@ -74,6 +76,7 @@ export class ProductDetailsComponent {
           });
         }
       });
+
   }
 
   handleQuantity(val: string) {

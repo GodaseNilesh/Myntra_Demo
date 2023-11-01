@@ -1,0 +1,16 @@
+.user-auth{
+  margin-top: 65px;
+  border: 1px solid #ddd;
+  height:auto;
+  font-family: "PT Serif", serif;
+}
+.mat-card {
+  width: auto;
+  max-height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 black;
+  margin: 5% 38%;
+}
+.mat-button{
+  position: relative;
+}

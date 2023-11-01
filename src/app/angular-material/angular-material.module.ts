@@ -13,10 +13,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
-
+import {MatSelectModule} from '@angular/material/select';
+import { register } from 'swiper/element/bundle';
 
 //for swiper images of products
-import {register } from 'swiper/element/bundle';
 register();
 
 @NgModule({
@@ -36,9 +36,10 @@ register();
     MatTableModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatRadioModule
-    // SwiperSlide,
-    // SwiperContainer
+    MatRadioModule,
+    MatSelectModule,
   ]
 })
-export class AngularMaterialModule { }
+export class AngularMaterialModule {
+
+ }

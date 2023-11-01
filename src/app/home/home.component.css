@@ -1,25 +1,109 @@
-.home-page{
-  margin-top: 30px;
+.home-page {
+  height: auto;
+  font-family: "PT Serif", serif;
+  padding: 0;
 }
 .main {
   width: 100%;
-  background-image: linear-gradient(180deg, rgba(244, 9, 9, 0),rgb(220, 218, 218,1)), url("https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_HERO_NTA_Up-to-20_2X_EN._CB576676677_.jpg");
+  background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/Phase3/J23_P3A_PC_NTA_TMR_Hero_2X_EN._CB575585158_.jpg");
   height: 800px;
   background-attachment: fixed;
-  background-position: center;
+  background-position:center;
   background-repeat: no-repeat;
   background-size: contain;
-  object-fit: contain;
-  margin-top: -16px;
+  margin-top: 70px;
+  padding: 0;
   background-color: rgb(220, 218, 218);
-  /* background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1)); */
+  border: 1px solid green;
 }
-.main img {
+/* .main img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-top: 60px;
+  padding-top: 50px;
+} */
+
+.offer-section {
+  width: 96%;
+  height: 500px;
+  /* border: 1px solid black; */
+  margin: 300px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
 }
+
+.discount-section {
+  height: 500px;
+  width: 24%;
+  /* border: 1px solid black; */
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 black;
+}
+.discount-section h4 {
+  margin-left: 20px;
+}
+.first-section {
+  width: 100%;
+  height: 90%;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.first-section div {
+  width: 49%;
+  height: 49%;
+  /* border: 1px solid green; */
+}
+.first-section div img {
+  width: 160px;
+  height: 170px;
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.first-section div a {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: black;
+}
+.signup-section h2 {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+.signup-section button {
+  margin: 20px auto 20px auto;
+  display: block;
+  width: 90%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: yellow;
+  color: black;
+  border: none;
+}
+.signup-section {
+  /* border: 1px solid red; */
+  height: 90%;
+  width: 90%;
+  margin: auto;
+}
+/* ///////////////////////////////////////////// */
+
 .product-header-img {
+  margin-top: 50px;
   object-fit: contain;
   height: 600px;
   width: 100%;
@@ -27,7 +111,6 @@
 .divider {
   color: black;
 }
-
 ngb-carousel {
   margin-top: 20px;
 }
