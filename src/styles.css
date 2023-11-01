@@ -4,9 +4,14 @@
 body {
   font-family: sans-serif;
   width: 100%;
+  /* height: auto; */
   /* border: 1px solid green; */
   background-color: rgb(238, 236, 236);
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
 }
 .common-form {
   text-align: center;
@@ -61,14 +66,7 @@ button:disabled {
 .max-width {
   width: 100%;
 }
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+
 
 /* //////////////////// mat card /////////////// */
 

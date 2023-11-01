@@ -69,6 +69,7 @@ export class UserProfileDetailsComponent {
     this.userOption='viewProfile';
   }
 
+  //here data= form data and data1=userdata
   changeAddress(data:any,data1:any){
     data1.address1=data.address1;
     data1.address2=data.address2;
@@ -77,7 +78,6 @@ export class UserProfileDetailsComponent {
       console.log(result);
     })
     setTimeout(() => {
-      this.reload();
       this.userOption='viewProfile';
     }, 100);
   }

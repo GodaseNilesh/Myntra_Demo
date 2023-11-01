@@ -15,9 +15,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import { register } from 'swiper/element/bundle';
+// import {MatSnackBar} from '@angular/material';
+
 
 //for swiper images of products
-register();
+// register();
 
 @NgModule({
   declarations: [],
@@ -38,6 +40,7 @@ register();
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
+    // MatSnackBar
   ]
 })
 export class AngularMaterialModule {

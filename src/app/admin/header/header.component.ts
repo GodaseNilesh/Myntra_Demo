@@ -72,9 +72,9 @@ export class HeaderComponent {
     this.searchResult = undefined;
   }
   submitSearch(val: string) {
-    this.route.navigate([`admin/search/${val}`]);
+    this.route.navigate([`/search/${val}`]);
   }
   redirectToDetails(id: number) {
-    this.route.navigate(['admin/details/' + id]);
+    this.route.navigate(['/details/' + id]);
   }
 }

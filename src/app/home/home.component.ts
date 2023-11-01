@@ -54,7 +54,7 @@ getFilteredProducts:product[]=[];
     showProductList(value:string){
       console.log(value);
       this.product.productListByCategory(value);
-      this.router.navigate(['admin/shop-by-category']);
+      this.router.navigate(['/shop-by-category']);
     }
 
     SearchByCategory(data:string){

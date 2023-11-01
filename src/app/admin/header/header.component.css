@@ -3,7 +3,6 @@
   justify-content: space-between;
   width: 100%;
   background-color: #ffffff;
-  /* background-color: transparent; */
   color: black;
   height: 65px;
   align-items: center;
@@ -13,8 +12,11 @@
   top: 0;
   /* overflow: hidden; */
   z-index: 100;
-  /* font-family: "Open Sans", sans-serif; */
   font-family: "PT Serif", serif;
+}
+.navbar h1 {
+  margin: 0;
+  padding: 0;
 }
 .navbar h1 a {
   color: black;
@@ -25,10 +27,12 @@
 }
 .navbar ul {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  height: auto;
+  padding-top: 15px;
+  height: 50px;
   /* border: 1px solid red; */
 }
 .navbar ul li {
@@ -67,6 +71,7 @@
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  margin-top: 15px;
 }
 .navbar .nav-search button {
   color: blueviolet;
@@ -76,6 +81,7 @@
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  margin-top: 15px; 
 }
 .suggested-result {
   position: absolute;
@@ -94,17 +100,17 @@
   cursor: pointer;
   color: blueviolet;
 }
-.userName{
+.userName {
   /* border: 1px solid red; */
   margin-top: 0;
 }
-.userName h6{
-  margin-top: -5px ;
+.userName h6 {
+  margin-top: -5px;
   margin-bottom: -7px;
   font-size: 12px;
   padding: 0px;
 }
-.userName a{
+.userName a {
   margin-top: -5px;
   padding: 0;
 }

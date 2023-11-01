@@ -1,5 +1,6 @@
 <div class="home-page">
   <div class="main">
+    <!-- <h1>Hello</h1> -->
     <div class="offer-section">
       <div class="discount-section">
         <h4>Keep Shoping for :</h4>
@@ -13,7 +14,6 @@
               alt=""
               routerLink="details/{{ product.id }}"
             />
-            <!-- <button mat-raised-button>{{product.name}}</button> -->
             <p>
               <a routerLink="details/{{ product.id }}">{{ product.name }}</a>
             </p>
@@ -21,13 +21,17 @@
         </div>
       </div>
       <div class="discount-section">
-        <h4>Starting From &#8377;1000 :</h4>
+        <h4>Starting From {{ 1000 | currency:'INR' }}</h4>
         <div class="first-section">
           <div *ngFor="let product of getFilteredProducts.slice(0, 4)">
-            <img src="{{ product.image }}" alt="" 
-            routerLink="details/{{ product.id }}"
+            <img
+              src="{{ product.image }}"
+              alt=""
+              routerLink="details/{{ product.id }}"
             />
-            <p><a routerLink="details/{{ product.id }}">{{ product.name }}</a></p>
+            <p>
+              <a routerLink="details/{{ product.id }}">{{ product.name }}</a>
+            </p>
           </div>
         </div>
       </div>
@@ -36,11 +40,11 @@
         <div class="first-section">
           <div *ngFor="let item of uniqueObjArray.slice(0, 4)">
             <img
-              src="{{item.image}}"
+              src="{{ item.image }}"
               alt=""
               routerLink="shop-by-category/{{ item.category }}"
             />
-            <p>{{item.discount/item.price*100}}% OFF</p>
+            <p>{{ (item.discount / item.price) * 100 }}% OFF</p>
           </div>
         </div>
       </div>
@@ -58,22 +62,24 @@
 
   <!-- <hr /> -->
   <!-- ///////////////// carousel for popular products ///////////// -->
-  <ngb-carousel *ngIf="popularProducts">
-    <ng-template *ngFor="let item of popularProducts" ngbSlide>
-      <div class="picsum-img-wrapper">
-        <a routerLink="details/{{ item.id }}">
-          <img
-            class="product-header-img"
-            src="{{ item.image }}"
-            alt="Random first slide"
-        /></a>
-      </div>
-      <div class="carousel-caption">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.discription }}</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
+  <div class="popular-products">
+    <ngb-carousel *ngIf="popularProducts">
+      <ng-template *ngFor="let item of popularProducts" ngbSlide>
+        <div class="picsum-img-wrapper">
+          <a routerLink="details/{{ item.id }}">
+            <img
+              class="product-header-img"
+              src="{{ item.image }}"
+              alt="Random first slide"
+          /></a>
+        </div>
+        <div class="carousel-caption">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.discription }}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
   <!-- ///////////////////////// Trendy Products ////////////////////////////// -->
   <div class="trendy-products">
     <h1>Trendy Products</h1>
@@ -113,15 +119,7 @@
     </div>
   </div>
   <mat-divider></mat-divider>
-
-  <!-- /////////////////////// swiper for products ///////////////////////// -->
-  <!-- <div>
-  <swiper-container>
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-  </swiper-container>
-</div> -->
+  <!-- // swiper for products ///////////// -->
 
   <!-- //////////////////////// Regular products //////////////////////////// -->
   <div class="product-list-wrapper">
