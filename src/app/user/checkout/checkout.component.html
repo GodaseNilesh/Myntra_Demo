@@ -3,7 +3,7 @@
   <p class="message-p">{{ orderMsg }}</p>
   <div class="row">
     <div class="col-sm-4 shipping-address">
-      <form #orderData="ngForm" (ngSubmit)="orderNow(orderData.value)">
+      <form #orderData="ngForm" (ngSubmit)="payNow(orderData.value)">
         <mat-card class="mat-card">
           <mat-card-header class="mat-card-header">
             <h3>Add Shipping Address</h3>
@@ -56,7 +56,7 @@
     </div>
     <div class="col-sm-7 product-details">
       <div class="amount-details">
-        <h3>TOtal Amount : {{ totalPrice }}</h3>
+        <h3>Total Amount : {{ totalPrice }}</h3>
         <h4>Payment Method : <b> Pay on Delivery</b></h4>
       </div>
       <div class="product-info" *ngFor="let item of cartData">

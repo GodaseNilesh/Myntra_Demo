@@ -3,6 +3,8 @@ import { ProductService } from '../../services/product.service';
 import { cart, order, product, profile } from '../../data-types';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+declare var Razorpay: any;
+
 
 @Component({
   selector: 'app-checkout',
@@ -11,7 +13,7 @@ import { UserService } from '../../services/user.service';
 })
 export class CheckoutComponent {
   // cartData: undefined | cart[]
-  totalPrice: number | undefined;
+  totalPrice: number =0;
   quantity: string | any;
   cartData: cart[] = [];
   orderMsg: string | undefined;
@@ -20,6 +22,8 @@ export class CheckoutComponent {
   companyData: product[] = [];
   companyname: undefined | string;
   userData: any;
+  userInfo:any;
+  
 
   constructor(private product: ProductService, private router: Router, private user:UserService) {}
 
@@ -38,18 +42,53 @@ export class CheckoutComponent {
         }
       });
       let price = 0;
-      result.forEach((item: cart) => {
+      let discount=0;
+      result.forEach((item: any) => {
         if (item.quantity && item.selected) {
+          console.log(item);
           this.quantity = item.quantity;
           console.log('quantity', this.quantity);
           this.productId = item.productId;
           price = price + +item.price * +item.quantity;
+          discount=discount+ +item.discount* +item.quantity;
         }
       });
-      this.totalPrice = price + price / 10 + 100 - price / 10;
+      this.totalPrice = price + price / 10 + 100 - discount;
     });
 
     this.getUserInfo();
+  }
+
+  payNow(data: any){
+    const options:any = {
+      description:'Pay with RazorPay',
+      currency:'INR',
+      amount: this.totalPrice*100,
+      name:data.name,
+      key:'rzp_test_9TtROtl0eC1mcM',
+      image:'https://yt3.googleusercontent.com/07PIDLZbBZRwRnaNnJBElu1waRQlLDL9k00q8UzYLufRTqDJhIbQzkjP1VR5axyxdz6PEld_Mwk=s900-c-k-c0x00ffffff-no-rj',
+      prefill: {
+        name:data.name,
+        email:data.email,
+        phone:data.mobile
+      },
+      theme:{
+        color:'#6466e3'
+      },
+      modal: {
+        condismiss: () => {
+          console.log('dismissed');
+        }
+      }
+    }
+
+    options.handler = (response: any, error: any) => {
+      if(response){
+        this.orderNow(data)
+      }
+      console.log(response);
+    };
+    Razorpay.open(options);
   }
 
   orderNow(data: { email: string; address: string; contact: string }) {
@@ -108,6 +147,12 @@ export class CheckoutComponent {
           }
         });
     }
+  }
+
+  getData(data:any){
+    console.log(data);
+    this.userInfo=data;
+
   }
   getUserInfo() {
     if (sessionStorage.getItem('user')) {

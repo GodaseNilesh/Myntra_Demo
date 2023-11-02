@@ -63,6 +63,7 @@
           <button class="form-button max-width" (click)="checkout()">
             Checkout
           </button>
+          <span class="error-msg">{{errorMsg}}</span>
         </ul>
       </div>
       <div class="product-details" *ngIf="showProduct">

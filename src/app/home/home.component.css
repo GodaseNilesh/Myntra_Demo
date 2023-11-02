@@ -120,6 +120,9 @@ ngb-carousel {
   width: 100%;
   /* border: 1px solid red; */
   height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* background-color: rgb(238,250,238); */
 }
 .trendy-products h1,
 .most-selled-product h1 {

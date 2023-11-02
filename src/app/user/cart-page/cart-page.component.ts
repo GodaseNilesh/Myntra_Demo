@@ -14,6 +14,7 @@ export default class CartPageComponent {
   userOrder: cart[] | undefined;
   disabled: boolean = false;
   removeCart = false;
+  errorMsg='';
   quantity: string | undefined;
   showProduct: cart | undefined;
   priceSummary: priceSummary = {
@@ -31,7 +32,16 @@ export default class CartPageComponent {
   }
 
   checkout() {
-    this.router.navigate(['user/checkout']);
+    this.cartData?.forEach(item=>{
+      if(item.selected){
+        this.router.navigate(['user/checkout']);
+      }else{
+        this.errorMsg='plz select atleast one product';
+        setTimeout(() => {
+          this.errorMsg='';
+        }, 1000);
+      }
+    })
   }
 
   selectedProduct(cart: any,quantity:string) {
