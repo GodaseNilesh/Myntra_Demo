@@ -1,10 +1,11 @@
 <!-- //////////////// -->
 <div class="row product-details" *ngIf="productData">
-  <mat-grid-list cols="2" rowHeight="1.4:1">
-    <mat-grid-tile class="image-tile">
+  <div class="discription">
+  <!-- <mat-grid-list cols="2" rowHeight="1.5:1"> -->
+    <div class="image-tile">
       <img class="product-image" src="{{ productData.image }}" alt="" />
-    </mat-grid-tile>
-    <mat-grid-tile class="content-tile">
+    </div>
+    <div class="content-tile">
       <div>
         <h1>{{ productData.name }}</h1>
         <h3>Price : {{ productData.price }}</h3>
@@ -36,8 +37,9 @@
           <button (click)="handleQuantity('plus')" mat-raised-button>+</button>
         </div>
       </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  <!-- </mat-grid-list> -->
+</div>
 </div>
 <mat-divider></mat-divider>
 
@@ -46,17 +48,19 @@
 <div class="main">
   <div class="inner">
     <mat-card *ngFor="let item of allRelatedProducts">
+      <mat-card-header>
+        <img src="{{ item.image }}" alt=""  routerLink="/details/{{item.id}}"/>
+      </mat-card-header>
       <mat-card-content>
-        <img src="{{ item.image }}" alt="" />
+        <span><b>{{item.name}}</b></span>
+        <span>Price:{{item.price}}</span>
+        <span>Color:{{item.color}}</span>
       </mat-card-content>
-      <mat-card-footer>
-        <button
-          mat-raised-button
-          routerLink="/details/{{ item.id }}"
-        >
-          {{ item.companyname }}
+      <!-- <mat-card-footer>
+        <button mat-raised-button routerLink="/details/{{ item.id }}">
+          View Details
         </button>
-      </mat-card-footer>
+      </mat-card-footer> -->
     </mat-card>
   </div>
 </div>

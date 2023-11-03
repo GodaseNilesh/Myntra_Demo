@@ -14,6 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatListModule} from '@angular/material/list';
 import { register } from 'swiper/element/bundle';
 // import {MatSnackBar} from '@angular/material';
 
@@ -40,6 +41,7 @@ import { register } from 'swiper/element/bundle';
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
+    MatListModule
     // MatSnackBar
   ]
 })

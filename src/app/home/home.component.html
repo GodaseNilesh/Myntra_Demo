@@ -21,7 +21,8 @@
         </div>
       </div>
       <div class="discount-section">
-        <h4>Starting From {{ 1000 | currency:'INR' }}</h4>
+        <h4>Starting From Rs.1000</h4>
+        <!-- Starting From 1000 ₹ -->
         <div class="first-section">
           <div *ngFor="let product of getFilteredProducts.slice(0, 4)">
             <img
@@ -86,12 +87,15 @@
     <div class="trendy-products-list">
       <mat-card *ngFor="let item of trendyProducts">
         <mat-card-content>
-          <img src="{{ item.image }}" alt="" />
+          <img src="{{ item.image }}" alt="" routerLink="details/{{item.id}}"/>
         </mat-card-content>
         <mat-card-footer>
-          <h5>{{ item.name }}</h5>
-          <p>Price : {{ item.price }}</p>
-          <button mat-raised-button routerLink="/details/{{ item.id }}">
+          <div class="product-details">
+            <h5>{{ item.name }}</h5>
+            <p>Price : {{ item.price }}</p>
+            <p>Color : {{ item.color }}</p>
+          </div>
+          <button mat-raised-button routerLink="details/{{ item.id }}">
             View Details
           </button>
         </mat-card-footer>
@@ -123,7 +127,7 @@
 
   <!-- //////////////////////// Regular products //////////////////////////// -->
   <div class="product-list-wrapper">
-    <h1>Regular Products</h1>
+    <h1>Shop deals in top categories:</h1>
     <div class="products">
       <div class="product-content" *ngFor="let item of uniqueObjArray">
         <div class="product-image">

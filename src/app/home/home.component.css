@@ -26,7 +26,7 @@
 .discount-section {
   height: 500px;
   width: 24%;
-  /* border: 1px solid black; */
+  border: 1px solid green;
   background-color: white;
   margin: auto;
   border-radius: 5px;
@@ -34,10 +34,12 @@
 }
 .discount-section h4 {
   margin-left: 20px;
+  margin-top: 10px;
+
 }
 .first-section {
   width: 100%;
-  height: 90%;
+  height: 450px;
   /* border: 1px solid red; */
   margin: auto;
   display: flex;
@@ -45,16 +47,16 @@
   justify-content: space-around;
 }
 .first-section div {
-  width: 49%;
-  height: 49%;
+  width: 170px;
+  height: 220px;
   /* border: 1px solid green; */
 }
 .first-section div img {
-  width: 160px;
-  height: 170px;
+  width: 140px;
+  height: 160px;
   /* border: 1px solid red; */
   margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -131,11 +133,15 @@ ngb-carousel {
 
 .trendy-products mat-card,
 .most-selled-product mat-card {
-  height: auto;
+  height: 350px;
   width: 19%;
   border: 1px solid #ddd;
   box-shadow: 0 5px 10px gray;
   /* padding: 10px 0px; */
+}
+
+.most-selled-product mat-card{
+  height: 325px;
 }
 mat-card-content img {
   width: 100%;
@@ -144,10 +150,14 @@ mat-card-content img {
   margin: auto;
   padding: auto;
 }
-/* mat-card-content img:hover {
+mat-card-content img:hover {
   transform: scale(1.1);
   transition-duration: 0.5s;
-} */
+}
+mat-card-footer{
+  /* border: 1px solid red; */
+  margin-top: 20px;
+}
 mat-card-footer h5,
 p {
   text-align: center;
@@ -157,6 +167,7 @@ p {
 mat-card-footer button {
   width: 100%;
   background-color: aliceblue;
+  margin-top: 4px;
   /* font-weight: 500; */
 }
 .trendy-products-list,
@@ -164,6 +175,7 @@ mat-card-footer button {
   display: flex;
   justify-content: space-around;
 }
+
 
 /* /////////////////// most selled products ///////////////////////////// */
 /* .most-selles-product{
@@ -181,8 +193,9 @@ mat-card-footer button {
   position: relative;
 }
 .product-list-wrapper h1 {
-  margin: 0;
+  /* margin-left: 20px; */
   padding-top: 0px 0px 0px 0px;
+  /* text-align: start; */
 }
 .products {
   display: flex;

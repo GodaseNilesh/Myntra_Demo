@@ -15,6 +15,7 @@
     width: 30%;
     margin: 0;
     box-shadow: 0 1px 1px 0.3px black;
+    height: 300px;
 }
 .details img{
     height: 100px;
@@ -35,8 +36,8 @@
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #9a9696;
-    box-shadow: 0 1px 1px 0.3px black;
+    border: none;
+    box-shadow: 0 2px 5px 0px black;
 }
 .summary h3{
     text-align: center;
@@ -81,4 +82,5 @@
     margin-right: auto;
     display: block;
     color: red;
+    margin-top: 10px;
 }

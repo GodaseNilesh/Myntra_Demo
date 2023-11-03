@@ -51,7 +51,7 @@
 }
 .selected-option mat-card {
   width: 90%;
-  border: 1px solid green;
+  box-shadow: 0 2px 5px 0 black;
   height: auto;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -61,7 +61,7 @@
 .selected-option span {
   width: 90%;
   margin: 5px auto;
-  border-bottom: 1px solid green;
+  /* border-bottom: 1px solid green; */
   font-size: 20px;
   display: flex;
   justify-content: space-between;

@@ -3,7 +3,6 @@
     <div class="search-option">
       <h1>Search By Company Name</h1><br>
 
-
     <mat-form-field>
       <mat-label>Choose Company Name</mat-label>
       <mat-select
@@ -16,18 +15,22 @@
       </mat-select>
     </mat-form-field>
 
+    <!-- <mat-tree>
+      <mat-tree-node> parent node </mat-tree-node>
+      <mat-tree-node> -- child node1 </mat-tree-node>
+      <mat-tree-node> -- child node2 </mat-tree-node>
+    </mat-tree> -->
 
-    <!-- <mat-form-field>
-      <mat-label>Choose Product Color</mat-label>
-      <mat-select
-        [(ngModel)]="selectedCompany"
-        (selectionChange)="selectCompany($event)"
-      >
-        <mat-option *ngFor="let item of UniqueCompany" [value]="item">
-          {{ item }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field> -->
+    <!-- <mat-selection-list #shoes>
+      <mat-list-option *ngFor="let shoe of [1,2,3,4]">
+        {{shoe}}
+      </mat-list-option>
+    </mat-selection-list>
+    
+    <p>
+      Options selected: {{shoes.selectedOptions.selected.length}}
+    </p> -->
+    
 
     </div>
     <div class="inner search-result" *ngIf="actions">
