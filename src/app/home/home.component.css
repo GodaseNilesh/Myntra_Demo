@@ -3,9 +3,10 @@
   font-family: "PT Serif", serif;
   padding: 0;
 }
-.main{
+.main {
   width: 100%;
-  height: 800px;
+  /* height: 800px; */
+  height: auto;
   border: 1px solid red;
   background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/Phase3/J23_P3A_PC_NTA_TMR_Hero_2X_EN._CB575585158_.jpg");
   background-attachment: fixed;
@@ -16,16 +17,19 @@
 }
 .offer-section {
   width: 96%;
-  height: 500px;
+  /* height: 500px; */
+  height: auto;
   /* border: 1px solid black; */
   margin: 300px auto 0px auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .discount-section {
   height: 500px;
-  width: 24%;
+  /* width: 24%; */
+  width: 350px;
   border: 1px solid green;
   background-color: white;
   margin: auto;
@@ -35,7 +39,6 @@
 .discount-section h4 {
   margin-left: 20px;
   margin-top: 10px;
-
 }
 .first-section {
   width: 100%;
@@ -140,7 +143,7 @@ ngb-carousel {
   /* padding: 10px 0px; */
 }
 
-.most-selled-product mat-card{
+.most-selled-product mat-card {
   height: 325px;
 }
 mat-card-content img {
@@ -154,7 +157,7 @@ mat-card-content img:hover {
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
-mat-card-footer{
+mat-card-footer {
   /* border: 1px solid red; */
   margin-top: 20px;
 }
@@ -176,7 +179,6 @@ mat-card-footer button {
   justify-content: space-around;
 }
 
-
 /* /////////////////// most selled products ///////////////////////////// */
 /* .most-selles-product{
   width: 100%;
@@ -191,6 +193,7 @@ mat-card-footer button {
   margin-top: 20px;
   height: auto;
   position: relative;
+  /* border: 1px solid red; */
 }
 .product-list-wrapper h1 {
   /* margin-left: 20px; */
@@ -204,6 +207,7 @@ mat-card-footer button {
   height: auto;
   padding: 1%;
   justify-content: center;
+  /* border: 1px solid green; */
 }
 .product-content {
   margin: 5px;
@@ -237,4 +241,119 @@ mat-card-footer button {
 .product-links a:hover {
   color: green;
   font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    /* border: 1px solid red; */
+    background-position: center 50px;
+  }
+  .offer-section {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .discount-section {
+    margin: 10px auto;
+  }
+
+  /* // trendy products ///////// */
+  .trendy-products {
+    margin-top: 20px;
+  }
+  .trendy-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    /* border: 1px solid red; */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .trendy-products-list mat-card {
+    height: 247px;
+    width: 170px;
+    margin-left: 10px;
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  mat-card-content img {
+    width: 120px;
+    height: 100px;
+  }
+  .trendy-products-list mat-card h5 {
+    font-size: 18px;
+  }
+
+  /* //////////// most selled products ///////////// */
+  .most-selled-product {
+    margin-top: 20px;
+  }
+  .selled-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    /* border: 1px solid red; */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .selled-products-list mat-card {
+    /* border: 1px solid red; */
+    height: 225px;
+    width: 170px;
+    margin-left: 10px;
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .selled-products-list mat-card h5 {
+    font-size: 18px;
+  }
+  .limited-text {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  mat-card-content img {
+    width: 120px;
+    height: 100px;
+  }
+
+  /* ////// for regular product list /////////////// */
+  .product-list-wrapper {
+    margin: 10px 0px;
+  }
+  .product-list-wrapper h1 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .products {
+    justify-content: space-around;
+  }
+  .product-content {
+    width: 180px;
+    margin-left: 10px;
+    margin: 0;
+    height: auto;
+    margin: 10px 0px;
+  }
+  .product-image {
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+  .product-image img{
+    height: 150px;
+    width: 150px;
+  }
 }

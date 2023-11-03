@@ -5,6 +5,7 @@
   margin-bottom: 10px;
   display: flex;
   font-family: "PT Serif", serif;
+  border: 1px solid red;
 }
 .search-option {
   width: 20%;
@@ -63,4 +64,11 @@ mat-card-content img {
   font-weight: 500;
   font-size: 22px;
   /* border: 1px solid red; */
+}
+
+/* /////////////// responsive page design ///////////////// */
+@media screen and (max-width:767px) {
+  .main{
+    
+  }
 }

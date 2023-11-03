@@ -52,15 +52,10 @@
         <img src="{{ item.image }}" alt=""  routerLink="/details/{{item.id}}"/>
       </mat-card-header>
       <mat-card-content>
-        <span><b>{{item.name}}</b></span>
+        <span class="limited-text"><b>{{item.name}}</b></span>
         <span>Price:{{item.price}}</span>
         <span>Color:{{item.color}}</span>
       </mat-card-content>
-      <!-- <mat-card-footer>
-        <button mat-raised-button routerLink="/details/{{ item.id }}">
-          View Details
-        </button>
-      </mat-card-footer> -->
     </mat-card>
   </div>
 </div>

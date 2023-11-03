@@ -121,3 +121,42 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+/* //////////////////// adding media query //////////////////// */
+@media screen and (max-width: 680px) {
+  .navbar{
+    height: 50px;
+    width: 100%;
+    border: 1px solid red;
+  }
+  .navbar h1 {
+    /* margin-left: 10px; */
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .navbar h1 a {
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .navbar .nav-search{
+    width: 50px;
+    border: 1px solid red;
+    height: 50px;
+    margin: 0;
+  }
+  .navbar .nav-search input{
+    height: 30px;
+    margin-top: 10px;
+    width: 50px;
+  }
+  .navbar .nav-search button{
+    height: 30px;
+    margin-top: 10px;
+  }
+  .navbar ul{
+    display: none;
+  }
+}
+
+/* /// incomplate media query :  */
